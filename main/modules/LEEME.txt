@@ -1,0 +1,8 @@
+Nombre de los submodulos dentro de los modulos.
+Por ejemplo estamos haciendo la ALU(nombre del archivo principal), y necesitamos por ejemplo dos sub modulos un full adder de 1 bit y un full adder de 16 bit.
+entonces el nombre de esos dos submodulos deveria ser
+
+ALU_full_adder
+ALU_full_adder_16bit
+
+Lo importante es que empieze con el nombre del archivo principal, nompiporta si lo separamos entre guion bajo medio o camel.
