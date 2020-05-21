@@ -1,1 +1,2 @@
 Agregar descrpicion de cada modulo en este txt y el nombre.
+ALU_ALU.circ es una ALU, por ahora adentro tiene un full adder de 16 bits
