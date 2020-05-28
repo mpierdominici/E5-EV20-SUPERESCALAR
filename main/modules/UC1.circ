@@ -134,16 +134,17 @@ end TCL_Generic;
     <wire from="(1010,790)" to="(1060,790)"/>
     <wire from="(1000,550)" to="(1050,550)"/>
     <wire from="(340,690)" to="(910,690)"/>
-    <wire from="(1050,550)" to="(1050,570)"/>
     <wire from="(830,460)" to="(950,460)"/>
     <wire from="(830,460)" to="(830,530)"/>
     <wire from="(910,540)" to="(970,540)"/>
+    <wire from="(1000,530)" to="(1380,530)"/>
     <wire from="(360,450)" to="(480,450)"/>
     <wire from="(700,530)" to="(760,530)"/>
     <wire from="(580,440)" to="(580,510)"/>
     <wire from="(1000,800)" to="(1000,830)"/>
     <wire from="(480,550)" to="(650,550)"/>
     <wire from="(990,560)" to="(990,590)"/>
+    <wire from="(1050,550)" to="(1050,620)"/>
     <wire from="(910,540)" to="(910,690)"/>
     <wire from="(950,420)" to="(1060,420)"/>
     <wire from="(950,500)" to="(1060,500)"/>
@@ -153,21 +154,20 @@ end TCL_Generic;
     <wire from="(250,780)" to="(980,780)"/>
     <wire from="(250,690)" to="(340,690)"/>
     <wire from="(480,450)" to="(480,550)"/>
-    <wire from="(1060,830)" to="(1200,830)"/>
     <wire from="(760,420)" to="(760,530)"/>
     <wire from="(950,460)" to="(950,500)"/>
+    <wire from="(1050,620)" to="(1380,620)"/>
     <wire from="(840,590)" to="(990,590)"/>
     <wire from="(860,420)" to="(950,420)"/>
-    <wire from="(1000,530)" to="(1220,530)"/>
     <wire from="(840,830)" to="(1000,830)"/>
     <wire from="(840,530)" to="(840,590)"/>
-    <wire from="(1050,570)" to="(1210,570)"/>
     <wire from="(760,530)" to="(830,530)"/>
     <wire from="(760,420)" to="(830,420)"/>
     <wire from="(580,510)" to="(650,510)"/>
     <wire from="(1010,770)" to="(1210,770)"/>
     <wire from="(1060,790)" to="(1060,830)"/>
     <wire from="(830,530)" to="(840,530)"/>
+    <wire from="(1060,830)" to="(1210,830)"/>
     <wire from="(950,370)" to="(950,420)"/>
     <wire from="(840,590)" to="(840,830)"/>
     <comp lib="1" loc="(700,530)" name="OR Gate"/>
@@ -193,18 +193,6 @@ end TCL_Generic;
       <a name="width" val="10"/>
       <a name="label" val="DAddress_IN"/>
     </comp>
-    <comp lib="0" loc="(1210,570)" name="Tunnel">
-      <a name="width" val="32"/>
-      <a name="label" val="Serial_Load_IN"/>
-    </comp>
-    <comp lib="0" loc="(1210,770)" name="Tunnel">
-      <a name="width" val="10"/>
-      <a name="label" val="DAddress_ALU_IN"/>
-    </comp>
-    <comp lib="0" loc="(1200,830)" name="Tunnel">
-      <a name="width" val="10"/>
-      <a name="label" val="DAddress_Store_IN"/>
-    </comp>
     <comp lib="1" loc="(860,420)" name="NOT Gate"/>
     <comp lib="0" loc="(1060,370)" name="Pin">
       <a name="facing" val="west"/>
@@ -229,9 +217,33 @@ end TCL_Generic;
       <a name="width" val="32"/>
       <a name="enable" val="false"/>
     </comp>
-    <comp lib="0" loc="(1220,530)" name="Tunnel">
+    <comp lib="0" loc="(1380,530)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
       <a name="width" val="32"/>
-      <a name="label" val="Serial_ALU_IN"/>
+      <a name="label" val="Serial_ALU_OUT"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(1380,620)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="32"/>
+      <a name="label" val="Serial_Load_OUT"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(1210,770)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="10"/>
+      <a name="label" val="DAddress_ALU_OUT"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(1210,830)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="10"/>
+      <a name="label" val="DAddress_Load_OUT"/>
+      <a name="labelloc" val="east"/>
     </comp>
   </circuit>
 </project>
