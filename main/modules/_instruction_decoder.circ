@@ -5,6 +5,9 @@ This file is intended to be loaded by Logisim-evolution (https://github.com/reds
     <tool name="Splitter">
       <a name="facing" val="west"/>
     </tool>
+    <tool name="Tunnel">
+      <a name="facing" val="north"/>
+    </tool>
   </lib>
   <lib desc="#Gates" name="1"/>
   <lib desc="#Plexers" name="2">
@@ -96,7 +99,7 @@ end TCL_Generic;&#13;
     </tool>
   </lib>
   <lib desc="#BFH-Praktika" name="9"/>
-  <main name="main"/>
+  <main name="instruction_decoder"/>
   <options>
     <a name="gateUndefined" val="ignore"/>
     <a name="simlimit" val="1000"/>
@@ -128,30 +131,6 @@ end TCL_Generic;&#13;
     <tool lib="1" name="AND Gate"/>
     <tool lib="1" name="OR Gate"/>
   </toolbar>
-  <circuit name="main">
-    <a name="circuit" val="main"/>
-    <a name="clabel" val=""/>
-    <a name="clabelup" val="east"/>
-    <a name="clabelfont" val="SansSerif bold 16"/>
-    <a name="circuitnamedbox" val="true"/>
-    <a name="circuitvhdlpath" val=""/>
-    <wire from="(390,100)" to="(450,100)"/>
-    <wire from="(160,100)" to="(210,100)"/>
-    <comp lib="4" loc="(450,90)" name="ROM">
-      <a name="addrWidth" val="5"/>
-      <a name="dataWidth" val="15"/>
-      <a name="contents">addr/data: 5 15
-0 20 82 41 20 28 21 21
-3102 0 3903 0 2103 0 91b 0
-0 20 5810 6010 1803 203 403 603
-281f 0 3 0 3007 0 3807
-</a>
-    </comp>
-    <comp loc="(390,100)" name="instruction_decoder"/>
-    <comp lib="0" loc="(160,100)" name="Pin">
-      <a name="width" val="24"/>
-    </comp>
-  </circuit>
   <circuit name="instruction_decoder">
     <a name="circuit" val="instruction_decoder"/>
     <a name="clabel" val=""/>
@@ -159,26 +138,26 @@ end TCL_Generic;&#13;
     <a name="clabelfont" val="SansSerif bold 16"/>
     <a name="circuitnamedbox" val="true"/>
     <a name="circuitvhdlpath" val=""/>
+    <wire from="(390,220)" to="(480,220)"/>
+    <wire from="(420,300)" to="(450,300)"/>
     <wire from="(580,280)" to="(630,280)"/>
     <wire from="(530,220)" to="(580,220)"/>
+    <wire from="(480,230)" to="(500,230)"/>
+    <wire from="(510,290)" to="(530,290)"/>
     <wire from="(420,290)" to="(420,300)"/>
     <wire from="(410,300)" to="(410,310)"/>
     <wire from="(480,220)" to="(480,230)"/>
-    <wire from="(390,210)" to="(500,210)"/>
-    <wire from="(410,270)" to="(450,270)"/>
-    <wire from="(410,310)" to="(450,310)"/>
-    <wire from="(410,280)" to="(450,280)"/>
-    <wire from="(390,220)" to="(480,220)"/>
-    <wire from="(420,300)" to="(450,300)"/>
-    <wire from="(480,230)" to="(500,230)"/>
-    <wire from="(510,290)" to="(530,290)"/>
     <wire from="(390,220)" to="(390,260)"/>
     <wire from="(410,290)" to="(420,290)"/>
     <wire from="(500,290)" to="(510,290)"/>
     <wire from="(560,290)" to="(630,290)"/>
     <wire from="(360,230)" to="(370,230)"/>
+    <wire from="(390,210)" to="(500,210)"/>
     <wire from="(580,220)" to="(580,280)"/>
     <wire from="(510,240)" to="(510,290)"/>
+    <wire from="(410,270)" to="(450,270)"/>
+    <wire from="(410,310)" to="(450,310)"/>
+    <wire from="(410,280)" to="(450,280)"/>
     <wire from="(650,270)" to="(660,270)"/>
     <comp lib="2" loc="(530,220)" name="Multiplexer">
       <a name="width" val="4"/>
