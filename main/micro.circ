@@ -9,7 +9,6 @@ This file is intended to be loaded by Logisim-evolution (https://github.com/reds
   <lib desc="#Gates" name="1"/>
   <lib desc="#Plexers" name="2">
     <tool name="Multiplexer">
-      <a name="select" val="4"/>
       <a name="enable" val="false"/>
     </tool>
     <tool name="Demultiplexer">
@@ -105,6 +104,7 @@ end TCL_Generic;&#13;
   <lib desc="file#modules\UC1.circ" name="12"/>
   <lib desc="file#modules\CLK_MODULE.circ" name="13"/>
   <lib desc="file#modules\MicroInstruction_ROM.circ" name="14"/>
+  <lib desc="file#modules\Selector_C.circ" name="15"/>
   <main name="EV20_Superescalar"/>
   <options>
     <a name="gateUndefined" val="ignore"/>
@@ -145,18 +145,14 @@ end TCL_Generic;&#13;
     <a name="circuitnamedbox" val="true"/>
     <a name="circuitvhdlpath" val=""/>
     <wire from="(880,2220)" to="(930,2220)"/>
-    <wire from="(880,2350)" to="(930,2350)"/>
-    <wire from="(3420,860)" to="(3430,860)"/>
     <wire from="(880,2220)" to="(880,2230)"/>
     <wire from="(910,2250)" to="(910,2260)"/>
     <wire from="(3250,3660)" to="(3320,3660)"/>
     <wire from="(2460,1950)" to="(2480,1950)"/>
+    <wire from="(850,720)" to="(850,790)"/>
+    <wire from="(1080,190)" to="(3230,190)"/>
     <wire from="(650,2300)" to="(710,2300)"/>
-    <wire from="(900,2270)" to="(900,2300)"/>
-    <wire from="(3400,740)" to="(3430,740)"/>
     <wire from="(2320,2380)" to="(2320,2430)"/>
-    <wire from="(620,2190)" to="(720,2190)"/>
-    <wire from="(3410,900)" to="(3430,900)"/>
     <wire from="(3370,3480)" to="(3390,3480)"/>
     <wire from="(4270,2170)" to="(4310,2170)"/>
     <wire from="(2250,2380)" to="(2320,2380)"/>
@@ -166,20 +162,36 @@ end TCL_Generic;&#13;
     <wire from="(2760,2380)" to="(2760,2390)"/>
     <wire from="(910,2260)" to="(930,2260)"/>
     <wire from="(880,2270)" to="(900,2270)"/>
-    <wire from="(620,2190)" to="(620,2230)"/>
-    <wire from="(720,2190)" to="(720,2230)"/>
-    <wire from="(710,2250)" to="(730,2250)"/>
-    <wire from="(880,2250)" to="(910,2250)"/>
+    <wire from="(640,210)" to="(640,830)"/>
     <wire from="(900,2300)" to="(930,2300)"/>
     <wire from="(3350,3660)" to="(3390,3660)"/>
     <wire from="(4290,1990)" to="(4310,1990)"/>
-    <wire from="(880,2290)" to="(880,2350)"/>
-    <wire from="(4230,2170)" to="(4240,2170)"/>
     <wire from="(710,2250)" to="(710,2300)"/>
     <wire from="(730,2250)" to="(740,2250)"/>
+    <wire from="(3230,190)" to="(3230,330)"/>
     <wire from="(2440,2130)" to="(2480,2130)"/>
+    <wire from="(880,2350)" to="(930,2350)"/>
+    <wire from="(640,830)" to="(690,830)"/>
+    <wire from="(140,140)" to="(200,140)"/>
+    <wire from="(140,140)" to="(140,720)"/>
+    <wire from="(3870,360)" to="(3880,360)"/>
+    <wire from="(640,210)" to="(1020,210)"/>
+    <wire from="(900,2270)" to="(900,2300)"/>
+    <wire from="(620,2190)" to="(720,2190)"/>
+    <wire from="(3860,400)" to="(3880,400)"/>
+    <wire from="(3850,240)" to="(3880,240)"/>
+    <wire from="(620,2190)" to="(620,2230)"/>
+    <wire from="(720,2190)" to="(720,2230)"/>
+    <wire from="(710,2250)" to="(730,2250)"/>
+    <wire from="(3230,190)" to="(3270,190)"/>
+    <wire from="(3230,330)" to="(3270,330)"/>
+    <wire from="(880,2250)" to="(910,2250)"/>
+    <wire from="(3860,390)" to="(3860,400)"/>
+    <wire from="(880,2290)" to="(880,2350)"/>
+    <wire from="(4230,2170)" to="(4240,2170)"/>
+    <wire from="(140,720)" to="(850,720)"/>
+    <wire from="(440,190)" to="(1020,190)"/>
     <wire from="(720,2230)" to="(730,2230)"/>
-    <wire from="(3410,890)" to="(3410,900)"/>
     <comp lib="1" loc="(2440,2130)" name="NOT Gate"/>
     <comp lib="0" loc="(4290,1990)" name="Constant">
       <a name="value" val="0x0"/>
@@ -194,18 +206,6 @@ end TCL_Generic;&#13;
       <a name="value" val="0x0"/>
     </comp>
     <comp lib="1" loc="(4270,2170)" name="NOT Gate"/>
-    <comp lib="11" loc="(3680,680)" name="Pipeline_register"/>
-    <comp lib="0" loc="(3410,890)" name="Constant">
-      <a name="width" val="10"/>
-      <a name="value" val="0x2aa"/>
-    </comp>
-    <comp lib="0" loc="(3420,860)" name="Constant">
-      <a name="width" val="32"/>
-      <a name="value" val="0x10001"/>
-    </comp>
-    <comp lib="0" loc="(3400,740)" name="Constant">
-      <a name="value" val="0x0"/>
-    </comp>
     <comp lib="12" loc="(3700,1280)" name="UC1"/>
     <comp lib="0" loc="(2250,2380)" name="Constant">
       <a name="width" val="16"/>
@@ -250,11 +250,45 @@ end TCL_Generic;&#13;
     <comp lib="0" loc="(930,2350)" name="Tunnel">
       <a name="label" val="CLK4"/>
     </comp>
-    <comp lib="14" loc="(3480,290)" name="Micro_Instruction_ROM"/>
     <comp lib="1" loc="(3350,3660)" name="NOT Gate"/>
     <comp lib="11" loc="(3640,3420)" name="Pipeline_register"/>
     <comp lib="0" loc="(3370,3480)" name="Constant">
       <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="4" loc="(200,130)" name="ROM">
+      <a name="addrWidth" val="11"/>
+      <a name="dataWidth" val="24"/>
+      <a name="contents">addr/data: 11 24
+0
+</a>
+      <a name="label" val="ProgramMemory"/>
+    </comp>
+    <comp lib="10" loc="(850,790)" name="PCreg">
+      <a name="label" val="ProgramCounterReg"/>
+    </comp>
+    <comp lib="4" loc="(1020,160)" name="Register">
+      <a name="width" val="24"/>
+      <a name="label" val="InstructionRegister"/>
+    </comp>
+    <comp lib="14" loc="(3540,190)" name="Micro_Instruction_ROM">
+      <a name="label" val="MicroInstructionROM"/>
+    </comp>
+    <comp lib="0" loc="(3860,390)" name="Constant">
+      <a name="width" val="10"/>
+      <a name="value" val="0x2aa"/>
+    </comp>
+    <comp lib="11" loc="(4130,180)" name="Pipeline_register"/>
+    <comp lib="0" loc="(3870,360)" name="Constant">
+      <a name="width" val="32"/>
+      <a name="value" val="0x10001"/>
+    </comp>
+    <comp lib="0" loc="(3850,240)" name="Constant">
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="15" loc="(3460,330)" name="Selector_C"/>
+    <comp lib="8" loc="(1664,168)" name="Text">
+      <a name="text" val="BUS B"/>
+      <a name="font" val="SansSerif bold 40"/>
     </comp>
   </circuit>
 </project>
