@@ -27,44 +27,44 @@
   <lib desc="#I/O" name="5"/>
   <lib desc="#HDL-IP" name="6">
     <tool name="VHDL Entity">
-      <a name="content">--------------------------------------------------------------------------------&#13;
--- HEIG-VD, institute REDS, 1400 Yverdon-les-Bains&#13;
--- Project :&#13;
--- File    :&#13;
--- Autor   :&#13;
--- Date    :&#13;
---&#13;
---------------------------------------------------------------------------------&#13;
--- Description :&#13;
---&#13;
---------------------------------------------------------------------------------&#13;
-&#13;
-library ieee;&#13;
-  use ieee.std_logic_1164.all;&#13;
-  --use ieee.numeric_std.all;&#13;
-&#13;
-entity VHDL_Component is&#13;
-  port(&#13;
-  ------------------------------------------------------------------------------&#13;
-  --Insert input ports below&#13;
-    horloge_i  : in  std_logic;                    -- input bit example&#13;
-    val_i      : in  std_logic_vector(3 downto 0); -- input vector example&#13;
-  ------------------------------------------------------------------------------&#13;
-  --Insert output ports below&#13;
-    max_o      : out std_logic;                    -- output bit example&#13;
-    cpt_o      : out std_logic_Vector(3 downto 0)  -- output vector example&#13;
-    );&#13;
-end VHDL_Component;&#13;
-&#13;
---------------------------------------------------------------------------------&#13;
---Complete your VHDL description below&#13;
-architecture type_architecture of VHDL_Component is&#13;
-&#13;
-&#13;
-begin&#13;
-&#13;
-&#13;
-end type_architecture;&#13;
+      <a name="content">--------------------------------------------------------------------------------
+-- HEIG-VD, institute REDS, 1400 Yverdon-les-Bains
+-- Project :
+-- File    :
+-- Autor   :
+-- Date    :
+--
+--------------------------------------------------------------------------------
+-- Description :
+--
+--------------------------------------------------------------------------------
+
+library ieee;
+  use ieee.std_logic_1164.all;
+  --use ieee.numeric_std.all;
+
+entity VHDL_Component is
+  port(
+  ------------------------------------------------------------------------------
+  --Insert input ports below
+    horloge_i  : in  std_logic;                    -- input bit example
+    val_i      : in  std_logic_vector(3 downto 0); -- input vector example
+  ------------------------------------------------------------------------------
+  --Insert output ports below
+    max_o      : out std_logic;                    -- output bit example
+    cpt_o      : out std_logic_Vector(3 downto 0)  -- output vector example
+    );
+end VHDL_Component;
+
+--------------------------------------------------------------------------------
+--Complete your VHDL description below
+architecture type_architecture of VHDL_Component is
+
+
+begin
+
+
+end type_architecture;
 </a>
     </tool>
   </lib>
@@ -383,7 +383,7 @@ end TCL_Generic;
       <a name="label" val="MRyMB"/>
     </comp>
     <comp lib="4" loc="(940,600)" name="Register">
-      <a name="width" val="6"/>
+      <a name="width" val="5"/>
       <a name="trigger" val="falling"/>
       <a name="label" val="Bbus"/>
     </comp>
@@ -449,7 +449,7 @@ end TCL_Generic;
       <a name="label" val="MRyMB_IN"/>
     </comp>
     <comp lib="0" loc="(290,690)" name="Tunnel">
-      <a name="width" val="6"/>
+      <a name="width" val="5"/>
       <a name="label" val="B_bus_IN"/>
     </comp>
     <comp lib="0" loc="(290,720)" name="Tunnel">
@@ -466,7 +466,7 @@ end TCL_Generic;
     </comp>
     <comp lib="0" loc="(80,730)" name="Splitter">
       <a name="fanout" val="8"/>
-      <a name="incoming" val="32"/>
+      <a name="incoming" val="31"/>
       <a name="bit1" val="0"/>
       <a name="bit2" val="0"/>
       <a name="bit3" val="0"/>
@@ -480,24 +480,23 @@ end TCL_Generic;
       <a name="bit11" val="4"/>
       <a name="bit12" val="4"/>
       <a name="bit13" val="4"/>
-      <a name="bit14" val="4"/>
+      <a name="bit14" val="5"/>
       <a name="bit15" val="5"/>
       <a name="bit16" val="5"/>
       <a name="bit17" val="5"/>
       <a name="bit18" val="5"/>
       <a name="bit19" val="5"/>
-      <a name="bit20" val="5"/>
+      <a name="bit20" val="6"/>
       <a name="bit21" val="6"/>
       <a name="bit22" val="6"/>
       <a name="bit23" val="6"/>
       <a name="bit24" val="6"/>
       <a name="bit25" val="6"/>
-      <a name="bit26" val="6"/>
+      <a name="bit26" val="7"/>
       <a name="bit27" val="7"/>
       <a name="bit28" val="7"/>
       <a name="bit29" val="7"/>
       <a name="bit30" val="7"/>
-      <a name="bit31" val="7"/>
     </comp>
     <comp lib="2" loc="(810,190)" name="Multiplexer">
       <a name="selloc" val="tr"/>
@@ -557,12 +556,12 @@ end TCL_Generic;
       <a name="label" val="MRyMB_IN"/>
     </comp>
     <comp lib="0" loc="(640,660)" name="Pin">
-      <a name="width" val="6"/>
+      <a name="width" val="5"/>
       <a name="label" val="B_bus_IN"/>
     </comp>
     <comp lib="2" loc="(770,650)" name="Multiplexer">
       <a name="selloc" val="tr"/>
-      <a name="width" val="6"/>
+      <a name="width" val="5"/>
       <a name="enable" val="false"/>
     </comp>
     <comp lib="0" loc="(750,610)" name="Tunnel">
@@ -571,7 +570,7 @@ end TCL_Generic;
     </comp>
     <comp lib="0" loc="(690,630)" name="Tunnel">
       <a name="facing" val="east"/>
-      <a name="width" val="6"/>
+      <a name="width" val="5"/>
       <a name="label" val="B_bus_IN"/>
     </comp>
     <comp lib="0" loc="(620,760)" name="Pin">
@@ -679,13 +678,13 @@ end TCL_Generic;
     </comp>
     <comp lib="0" loc="(1270,630)" name="Tunnel">
       <a name="facing" val="south"/>
-      <a name="width" val="6"/>
+      <a name="width" val="5"/>
       <a name="label" val="B_bus_OUT"/>
     </comp>
     <comp lib="0" loc="(1360,670)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
-      <a name="width" val="6"/>
+      <a name="width" val="5"/>
       <a name="label" val="B_bus_OUT"/>
       <a name="labelloc" val="east"/>
     </comp>
@@ -727,7 +726,7 @@ end TCL_Generic;
     </comp>
     <comp lib="0" loc="(180,940)" name="Pin">
       <a name="facing" val="north"/>
-      <a name="width" val="32"/>
+      <a name="width" val="31"/>
       <a name="label" val="Serial_IN"/>
     </comp>
     <comp lib="0" loc="(1730,700)" name="Tunnel">
@@ -737,7 +736,7 @@ end TCL_Generic;
     </comp>
     <comp lib="0" loc="(1730,640)" name="Tunnel">
       <a name="facing" val="east"/>
-      <a name="width" val="6"/>
+      <a name="width" val="5"/>
       <a name="label" val="B_bus_OUT"/>
     </comp>
     <comp lib="0" loc="(1740,390)" name="Tunnel">
@@ -772,7 +771,7 @@ end TCL_Generic;
     <comp lib="0" loc="(1940,650)" name="Splitter">
       <a name="facing" val="west"/>
       <a name="fanout" val="8"/>
-      <a name="incoming" val="32"/>
+      <a name="incoming" val="31"/>
       <a name="appear" val="right"/>
       <a name="bit1" val="0"/>
       <a name="bit2" val="0"/>
@@ -787,28 +786,27 @@ end TCL_Generic;
       <a name="bit11" val="4"/>
       <a name="bit12" val="4"/>
       <a name="bit13" val="4"/>
-      <a name="bit14" val="4"/>
+      <a name="bit14" val="5"/>
       <a name="bit15" val="5"/>
       <a name="bit16" val="5"/>
       <a name="bit17" val="5"/>
       <a name="bit18" val="5"/>
       <a name="bit19" val="5"/>
-      <a name="bit20" val="5"/>
+      <a name="bit20" val="6"/>
       <a name="bit21" val="6"/>
       <a name="bit22" val="6"/>
       <a name="bit23" val="6"/>
       <a name="bit24" val="6"/>
       <a name="bit25" val="6"/>
-      <a name="bit26" val="6"/>
+      <a name="bit26" val="7"/>
       <a name="bit27" val="7"/>
       <a name="bit28" val="7"/>
       <a name="bit29" val="7"/>
       <a name="bit30" val="7"/>
-      <a name="bit31" val="7"/>
     </comp>
     <comp lib="0" loc="(1880,980)" name="Pin">
       <a name="output" val="true"/>
-      <a name="width" val="32"/>
+      <a name="width" val="31"/>
       <a name="label" val="Serial_OUT"/>
     </comp>
     <comp lib="1" loc="(840,1170)" name="NOT Gate"/>
