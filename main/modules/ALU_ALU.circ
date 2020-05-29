@@ -907,10 +907,10 @@ end TCL_Generic;
     <wire from="(270,670)" to="(340,670)"/>
     <wire from="(270,1070)" to="(340,1070)"/>
     <wire from="(280,610)" to="(340,610)"/>
+    <wire from="(540,1040)" to="(540,1050)"/>
     <wire from="(540,1440)" to="(540,1450)"/>
     <wire from="(540,240)" to="(540,250)"/>
     <wire from="(540,640)" to="(540,650)"/>
-    <wire from="(540,1040)" to="(540,1050)"/>
     <wire from="(180,1070)" to="(240,1070)"/>
     <wire from="(180,670)" to="(240,670)"/>
     <wire from="(110,1170)" to="(160,1170)"/>
@@ -979,10 +979,10 @@ end TCL_Generic;
     <wire from="(260,650)" to="(260,700)"/>
     <wire from="(1120,150)" to="(1120,700)"/>
     <wire from="(180,1080)" to="(250,1080)"/>
+    <wire from="(540,1140)" to="(540,1150)"/>
     <wire from="(540,1540)" to="(540,1550)"/>
     <wire from="(540,340)" to="(540,350)"/>
     <wire from="(540,740)" to="(540,750)"/>
-    <wire from="(540,1140)" to="(540,1150)"/>
     <wire from="(1100,820)" to="(1100,1350)"/>
     <wire from="(1190,680)" to="(1230,680)"/>
     <wire from="(280,1120)" to="(280,1130)"/>
@@ -999,14 +999,14 @@ end TCL_Generic;
     <wire from="(180,1040)" to="(210,1040)"/>
     <wire from="(200,860)" to="(200,1030)"/>
     <wire from="(230,460)" to="(230,570)"/>
-    <wire from="(540,1090)" to="(610,1090)"/>
-    <wire from="(540,1250)" to="(610,1250)"/>
+    <wire from="(540,690)" to="(610,690)"/>
+    <wire from="(540,850)" to="(610,850)"/>
     <wire from="(540,450)" to="(610,450)"/>
     <wire from="(540,290)" to="(610,290)"/>
     <wire from="(540,1490)" to="(610,1490)"/>
     <wire from="(540,50)" to="(610,50)"/>
-    <wire from="(540,690)" to="(610,690)"/>
-    <wire from="(540,850)" to="(610,850)"/>
+    <wire from="(540,1090)" to="(610,1090)"/>
+    <wire from="(540,1250)" to="(610,1250)"/>
     <wire from="(260,1040)" to="(340,1040)"/>
     <wire from="(830,100)" to="(900,100)"/>
     <wire from="(830,500)" to="(900,500)"/>
@@ -1523,54 +1523,6 @@ end TCL_Generic;
     </comp>
     <comp lib="0" loc="(80,1350)" name="Pin">
       <a name="label" val="Carryin"/>
-    </comp>
-  </circuit>
-  <circuit name="main">
-    <a name="circuit" val="main"/>
-    <a name="clabel" val=""/>
-    <a name="clabelup" val="east"/>
-    <a name="clabelfont" val="SansSerif bold 16"/>
-    <a name="circuitnamedbox" val="true"/>
-    <a name="circuitvhdlpath" val=""/>
-    <wire from="(670,310)" to="(670,320)"/>
-    <wire from="(670,340)" to="(670,350)"/>
-    <wire from="(190,330)" to="(190,340)"/>
-    <wire from="(190,360)" to="(190,370)"/>
-    <wire from="(600,320)" to="(670,320)"/>
-    <wire from="(600,340)" to="(670,340)"/>
-    <wire from="(180,330)" to="(190,330)"/>
-    <wire from="(180,370)" to="(190,370)"/>
-    <wire from="(180,400)" to="(190,400)"/>
-    <wire from="(180,300)" to="(190,300)"/>
-    <wire from="(190,380)" to="(190,400)"/>
-    <wire from="(190,300)" to="(190,320)"/>
-    <wire from="(670,310)" to="(680,310)"/>
-    <wire from="(670,350)" to="(680,350)"/>
-    <wire from="(190,340)" to="(480,340)"/>
-    <wire from="(190,360)" to="(480,360)"/>
-    <wire from="(190,380)" to="(480,380)"/>
-    <wire from="(190,320)" to="(480,320)"/>
-    <comp loc="(600,320)" name="ALU"/>
-    <comp lib="0" loc="(180,330)" name="Pin">
-      <a name="width" val="16"/>
-    </comp>
-    <comp lib="0" loc="(180,370)" name="Pin">
-      <a name="width" val="16"/>
-    </comp>
-    <comp lib="0" loc="(180,400)" name="Pin"/>
-    <comp lib="0" loc="(180,300)" name="Pin">
-      <a name="width" val="4"/>
-    </comp>
-    <comp lib="0" loc="(680,310)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="width" val="16"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="0" loc="(680,350)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="labelloc" val="east"/>
     </comp>
   </circuit>
 </project>
