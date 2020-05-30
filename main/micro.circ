@@ -73,20 +73,20 @@ end type_architecture;&#13;
   </lib>
   <lib desc="#TCL" name="7">
     <tool name="TclGeneric">
-      <a name="content">library ieee;
-use ieee.std_logic_1164.all;
-
-entity TCL_Generic is
-  port(
-    --Insert input ports below
-    horloge_i  : in  std_logic;                    -- input bit example
-    val_i      : in  std_logic_vector(3 downto 0); -- input vector example
-
-	  --Insert output ports below
-    max_o      : out std_logic;                    -- output bit example
-    cpt_o      : out std_logic_Vector(3 downto 0)  -- output vector example
-  );
-end TCL_Generic;
+      <a name="content">library ieee;&#13;
+use ieee.std_logic_1164.all;&#13;
+&#13;
+entity TCL_Generic is&#13;
+  port(&#13;
+    --Insert input ports below&#13;
+    horloge_i  : in  std_logic;                    -- input bit example&#13;
+    val_i      : in  std_logic_vector(3 downto 0); -- input vector example&#13;
+&#13;
+	  --Insert output ports below&#13;
+    max_o      : out std_logic;                    -- output bit example&#13;
+    cpt_o      : out std_logic_Vector(3 downto 0)  -- output vector example&#13;
+  );&#13;
+end TCL_Generic;&#13;
 </a>
     </tool>
   </lib>
@@ -108,7 +108,7 @@ end TCL_Generic;
   <lib desc="file#modules\Selector_A.circ" name="16"/>
   <lib desc="file#modules\ALU_ALU.circ" name="17"/>
   <lib desc="file#modules\Bloque1.circ" name="18"/>
-  <lib desc="file#modules\Data_Data.circ" name="19"/>
+  <lib desc="file#modules\Data_Data2.circ" name="19"/>
   <main name="EV20_Superescalar"/>
   <options>
     <a name="gateUndefined" val="ignore"/>
@@ -163,6 +163,7 @@ end TCL_Generic;
     <wire from="(2800,240)" to="(2800,250)"/>
     <wire from="(2800,320)" to="(2800,330)"/>
     <wire from="(4160,240)" to="(4160,270)"/>
+    <wire from="(950,420)" to="(970,420)"/>
     <wire from="(4120,850)" to="(4160,850)"/>
     <wire from="(4120,930)" to="(4160,930)"/>
     <wire from="(1650,1030)" to="(1780,1030)"/>
@@ -281,7 +282,6 @@ end TCL_Generic;
     <wire from="(2190,190)" to="(2350,190)"/>
     <wire from="(1650,190)" to="(1880,190)"/>
     <wire from="(1020,230)" to="(1020,240)"/>
-    <wire from="(2750,550)" to="(2770,550)"/>
     <wire from="(140,140)" to="(200,140)"/>
     <wire from="(3270,320)" to="(3470,320)"/>
     <wire from="(3970,220)" to="(3970,270)"/>
@@ -361,7 +361,7 @@ end TCL_Generic;
       <a name="addrWidth" val="11"/>
       <a name="dataWidth" val="24"/>
       <a name="contents">addr/data: 11 24
-80c41 200144
+400140
 </a>
       <a name="label" val="ProgramMemory"/>
     </comp>
@@ -580,21 +580,22 @@ end TCL_Generic;
     <comp lib="0" loc="(660,860)" name="Splitter">
       <a name="fanout" val="1"/>
       <a name="incoming" val="24"/>
-      <a name="bit1" val="0"/>
-      <a name="bit2" val="0"/>
-      <a name="bit3" val="0"/>
-      <a name="bit4" val="0"/>
+      <a name="bit0" val="none"/>
+      <a name="bit1" val="none"/>
+      <a name="bit2" val="none"/>
+      <a name="bit3" val="none"/>
+      <a name="bit4" val="none"/>
       <a name="bit5" val="0"/>
       <a name="bit6" val="0"/>
       <a name="bit7" val="0"/>
       <a name="bit8" val="0"/>
       <a name="bit9" val="0"/>
       <a name="bit10" val="0"/>
-      <a name="bit11" val="none"/>
-      <a name="bit12" val="none"/>
-      <a name="bit13" val="none"/>
-      <a name="bit14" val="none"/>
-      <a name="bit15" val="none"/>
+      <a name="bit11" val="0"/>
+      <a name="bit12" val="0"/>
+      <a name="bit13" val="0"/>
+      <a name="bit14" val="0"/>
+      <a name="bit15" val="0"/>
       <a name="bit16" val="none"/>
       <a name="bit17" val="none"/>
       <a name="bit18" val="none"/>
@@ -702,8 +703,8 @@ end TCL_Generic;
       <a name="bit8" val="none"/>
       <a name="bit9" val="none"/>
       <a name="bit10" val="none"/>
-      <a name="bit11" val="0"/>
-      <a name="bit12" val="0"/>
+      <a name="bit11" val="none"/>
+      <a name="bit12" val="none"/>
       <a name="bit13" val="none"/>
       <a name="bit14" val="none"/>
       <a name="bit15" val="none"/>
@@ -711,8 +712,8 @@ end TCL_Generic;
       <a name="bit17" val="none"/>
       <a name="bit18" val="none"/>
       <a name="bit19" val="none"/>
-      <a name="bit20" val="none"/>
-      <a name="bit21" val="none"/>
+      <a name="bit20" val="0"/>
+      <a name="bit21" val="0"/>
       <a name="bit22" val="none"/>
       <a name="bit23" val="none"/>
     </comp>
@@ -908,10 +909,10 @@ end TCL_Generic;
       <a name="facing" val="west"/>
       <a name="radix" val="10unsigned"/>
     </comp>
-    <comp lib="0" loc="(2750,550)" name="Pin"/>
-    <comp lib="0" loc="(2770,550)" name="Tunnel">
+    <comp lib="12" loc="(3270,220)" name="UC1"/>
+    <comp lib="0" loc="(970,420)" name="Tunnel">
       <a name="label" val="pulseGenManual"/>
     </comp>
-    <comp lib="12" loc="(3270,220)" name="UC1"/>
+    <comp lib="0" loc="(950,420)" name="Pin"/>
   </circuit>
 </project>
