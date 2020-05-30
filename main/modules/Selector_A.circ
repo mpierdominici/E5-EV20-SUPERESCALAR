@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <project source="2.14.6" version="1.0">
-  This file is intended to be loaded by Logisim-evolution (https://github.com/reds-heig/logisim-evolution).
-
-  <lib desc="#Wiring" name="0"/>
+This file is intended to be loaded by Logisim-evolution (https://github.com/reds-heig/logisim-evolution).
+<lib desc="#Wiring" name="0">
+    <tool name="Splitter">
+      <a name="facing" val="west"/>
+    </tool>
+  </lib>
   <lib desc="#Gates" name="1"/>
   <lib desc="#Plexers" name="2">
     <tool name="Multiplexer">
@@ -132,12 +135,13 @@ end TCL_Generic;&#13;
     <a name="circuitnamedbox" val="true"/>
     <a name="circuitvhdlpath" val=""/>
     <wire from="(330,250)" to="(330,390)"/>
-    <wire from="(410,210)" to="(410,220)"/>
     <wire from="(410,290)" to="(410,300)"/>
+    <wire from="(410,210)" to="(410,220)"/>
     <wire from="(410,310)" to="(410,320)"/>
     <wire from="(410,330)" to="(410,340)"/>
     <wire from="(330,390)" to="(450,390)"/>
     <wire from="(370,350)" to="(370,360)"/>
+    <wire from="(320,160)" to="(320,180)"/>
     <wire from="(390,230)" to="(390,260)"/>
     <wire from="(410,250)" to="(410,280)"/>
     <wire from="(390,260)" to="(430,260)"/>
@@ -145,28 +149,26 @@ end TCL_Generic;&#13;
     <wire from="(280,240)" to="(310,240)"/>
     <wire from="(480,170)" to="(480,280)"/>
     <wire from="(370,260)" to="(390,260)"/>
-    <wire from="(410,220)" to="(430,220)"/>
     <wire from="(410,240)" to="(430,240)"/>
-    <wire from="(410,200)" to="(430,200)"/>
     <wire from="(410,280)" to="(430,280)"/>
+    <wire from="(410,220)" to="(430,220)"/>
+    <wire from="(410,200)" to="(430,200)"/>
     <wire from="(410,300)" to="(430,300)"/>
     <wire from="(410,320)" to="(430,320)"/>
     <wire from="(410,340)" to="(430,340)"/>
-    <wire from="(320,140)" to="(320,180)"/>
-    <wire from="(320,140)" to="(470,140)"/>
+    <wire from="(320,160)" to="(470,160)"/>
     <wire from="(280,190)" to="(350,190)"/>
+    <wire from="(410,320)" to="(410,330)"/>
+    <wire from="(410,340)" to="(410,350)"/>
     <wire from="(410,200)" to="(410,210)"/>
     <wire from="(410,240)" to="(410,250)"/>
     <wire from="(390,260)" to="(390,270)"/>
     <wire from="(410,280)" to="(410,290)"/>
     <wire from="(410,300)" to="(410,310)"/>
-    <wire from="(410,320)" to="(410,330)"/>
-    <wire from="(410,340)" to="(410,350)"/>
-    <wire from="(350,160)" to="(470,160)"/>
+    <wire from="(350,140)" to="(470,140)"/>
     <wire from="(370,260)" to="(370,270)"/>
     <wire from="(410,220)" to="(410,240)"/>
     <wire from="(450,360)" to="(450,390)"/>
-    <wire from="(350,160)" to="(350,190)"/>
     <wire from="(280,180)" to="(320,180)"/>
     <wire from="(370,350)" to="(410,350)"/>
     <wire from="(390,270)" to="(430,270)"/>
@@ -174,13 +176,14 @@ end TCL_Generic;&#13;
     <wire from="(500,150)" to="(530,150)"/>
     <wire from="(280,230)" to="(310,230)"/>
     <wire from="(280,210)" to="(310,210)"/>
+    <wire from="(410,310)" to="(430,310)"/>
+    <wire from="(410,290)" to="(430,290)"/>
+    <wire from="(410,350)" to="(430,350)"/>
+    <wire from="(410,330)" to="(430,330)"/>
     <wire from="(410,210)" to="(430,210)"/>
     <wire from="(410,250)" to="(430,250)"/>
-    <wire from="(410,290)" to="(430,290)"/>
-    <wire from="(410,310)" to="(430,310)"/>
-    <wire from="(410,330)" to="(430,330)"/>
-    <wire from="(410,350)" to="(430,350)"/>
     <wire from="(470,280)" to="(480,280)"/>
+    <wire from="(350,140)" to="(350,190)"/>
     <wire from="(190,210)" to="(260,210)"/>
     <comp lib="0" loc="(190,210)" name="Pin">
       <a name="width" val="24"/>
