@@ -231,6 +231,7 @@ end TCL_Generic;&#13;
     <wire from="(330,790)" to="(370,790)"/>
     <wire from="(2480,400)" to="(2550,400)"/>
     <wire from="(2710,2360)" to="(2760,2360)"/>
+    <wire from="(2300,380)" to="(2550,380)"/>
     <wire from="(290,930)" to="(310,930)"/>
     <wire from="(2550,200)" to="(2550,210)"/>
     <wire from="(2550,280)" to="(2550,290)"/>
@@ -251,6 +252,7 @@ end TCL_Generic;&#13;
     <wire from="(2880,240)" to="(2880,320)"/>
     <wire from="(3170,2260)" to="(3170,2270)"/>
     <wire from="(680,850)" to="(690,850)"/>
+    <wire from="(2300,350)" to="(2300,380)"/>
     <wire from="(2060,770)" to="(2090,770)"/>
     <wire from="(1740,1050)" to="(1780,1050)"/>
     <wire from="(2360,870)" to="(2450,870)"/>
@@ -283,6 +285,7 @@ end TCL_Generic;&#13;
     <wire from="(1240,90)" to="(1240,190)"/>
     <wire from="(2350,210)" to="(2350,230)"/>
     <wire from="(3750,1050)" to="(3800,1050)"/>
+    <wire from="(2070,350)" to="(2300,350)"/>
     <wire from="(2800,340)" to="(2820,340)"/>
     <wire from="(2800,180)" to="(2820,180)"/>
     <wire from="(2960,260)" to="(2960,360)"/>
@@ -291,6 +294,7 @@ end TCL_Generic;&#13;
     <wire from="(1660,990)" to="(1780,990)"/>
     <wire from="(4140,240)" to="(4160,240)"/>
     <wire from="(3140,2270)" to="(3170,2270)"/>
+    <wire from="(1880,350)" to="(1930,350)"/>
     <wire from="(4070,1180)" to="(4220,1180)"/>
     <wire from="(3840,890)" to="(3870,890)"/>
     <wire from="(2540,2390)" to="(2670,2390)"/>
@@ -398,7 +402,6 @@ end TCL_Generic;&#13;
     <wire from="(650,860)" to="(660,860)"/>
     <wire from="(2910,150)" to="(2910,230)"/>
     <wire from="(1880,190)" to="(1920,190)"/>
-    <wire from="(1880,350)" to="(1920,350)"/>
     <wire from="(1880,270)" to="(1920,270)"/>
     <wire from="(1650,190)" to="(1650,220)"/>
     <wire from="(2350,330)" to="(2500,330)"/>
@@ -849,7 +852,6 @@ end TCL_Generic;&#13;
     <comp lib="0" loc="(3890,300)" name="Tunnel">
       <a name="label" val="pulseGenManual"/>
     </comp>
-    <comp lib="16" loc="(2030,350)" name="Selector_A"/>
     <comp lib="0" loc="(2950,1080)" name="Probe">
       <a name="facing" val="west"/>
       <a name="radix" val="10unsigned"/>
@@ -1144,5 +1146,6 @@ end TCL_Generic;&#13;
       <a name="bit4" val="0"/>
       <a name="bit5" val="none"/>
     </comp>
+    <comp lib="16" loc="(2070,350)" name="Selector_A"/>
   </circuit>
 </project>
