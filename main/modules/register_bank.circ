@@ -3,39 +3,14 @@
 This file is intended to be loaded by Logisim-evolution (https://github.com/reds-heig/logisim-evolution).
 <lib desc="#Wiring" name="0">
     <tool name="Splitter">
-      <a name="facing" val="south"/>
-      <a name="incoming" val="32"/>
+      <a name="facing" val="west"/>
+      <a name="incoming" val="6"/>
+      <a name="appear" val="center"/>
       <a name="bit1" val="0"/>
       <a name="bit2" val="0"/>
-      <a name="bit3" val="0"/>
-      <a name="bit4" val="0"/>
-      <a name="bit5" val="0"/>
-      <a name="bit6" val="0"/>
-      <a name="bit7" val="0"/>
-      <a name="bit8" val="0"/>
-      <a name="bit9" val="0"/>
-      <a name="bit10" val="0"/>
-      <a name="bit11" val="0"/>
-      <a name="bit12" val="0"/>
-      <a name="bit13" val="0"/>
-      <a name="bit14" val="0"/>
-      <a name="bit15" val="0"/>
-      <a name="bit16" val="1"/>
-      <a name="bit17" val="1"/>
-      <a name="bit18" val="1"/>
-      <a name="bit19" val="1"/>
-      <a name="bit20" val="1"/>
-      <a name="bit21" val="1"/>
-      <a name="bit22" val="1"/>
-      <a name="bit23" val="1"/>
-      <a name="bit24" val="1"/>
-      <a name="bit25" val="1"/>
-      <a name="bit26" val="1"/>
-      <a name="bit27" val="1"/>
-      <a name="bit28" val="1"/>
-      <a name="bit29" val="1"/>
-      <a name="bit30" val="1"/>
-      <a name="bit31" val="1"/>
+      <a name="bit3" val="1"/>
+      <a name="bit4" val="1"/>
+      <a name="bit5" val="1"/>
     </tool>
     <tool name="Tunnel">
       <a name="facing" val="north"/>
@@ -182,16 +157,16 @@ end TCL_Generic;&#13;
       <text fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="65" y="144">register_out_B_address</text>
       <rect height="4" stroke="none" width="10" x="420" y="58"/>
       <text fill="#404040" font-family="Dialog" font-size="12" text-anchor="end" x="415" y="64">register_out_A_data</text>
-      <circ-port height="8" pin="2760,1480" width="8" x="46" y="116"/>
       <circ-port height="8" pin="230,240" width="8" x="46" y="96"/>
-      <circ-port height="8" pin="2760,1580" width="8" x="46" y="136"/>
       <rect height="4" stroke="none" width="10" x="420" y="78"/>
       <text fill="#404040" font-family="Dialog" font-size="12" text-anchor="end" x="413" y="85">register_out_B_data</text>
       <rect fill="#fc00de" fill-opacity="0.996" height="20" stroke="none" width="360" x="59" y="172"/>
-      <circ-port height="10" pin="2760,1800" width="10" x="425" y="75"/>
       <circ-port height="8" pin="260,150" width="8" x="46" y="76"/>
-      <circ-port height="10" pin="2760,1270" width="10" x="425" y="55"/>
       <circ-port height="8" pin="200,80" width="8" x="46" y="56"/>
+      <circ-port height="10" pin="2760,1270" width="10" x="425" y="55"/>
+      <circ-port height="10" pin="2760,1800" width="10" x="425" y="75"/>
+      <circ-port height="8" pin="2760,1580" width="8" x="46" y="136"/>
+      <circ-port height="8" pin="2760,1490" width="8" x="46" y="116"/>
       <rect fill="#ff00df" fill-opacity="0.078" height="143" stroke="#000000" stroke-width="2" width="359" x="59" y="48"/>
       <text fill="#ffffff" font-family="Dialog" font-size="14" font-weight="bold" text-anchor="middle" x="230" y="187">register_bank</text>
       <text font-family="SansSerif" font-size="12" text-anchor="middle" x="138" y="164">register_out_aux_address</text>
@@ -384,6 +359,7 @@ end TCL_Generic;&#13;
     <wire from="(2600,1670)" to="(2600,2150)"/>
     <wire from="(1550,500)" to="(1590,500)"/>
     <wire from="(1100,1240)" to="(1100,1270)"/>
+    <wire from="(2690,1580)" to="(2760,1580)"/>
     <wire from="(720,540)" to="(720,570)"/>
     <wire from="(1170,2180)" to="(1230,2180)"/>
     <wire from="(990,2550)" to="(1110,2550)"/>
@@ -445,7 +421,6 @@ end TCL_Generic;&#13;
     <wire from="(1590,2150)" to="(2020,2150)"/>
     <wire from="(1520,2240)" to="(1520,2260)"/>
     <wire from="(1100,540)" to="(1100,570)"/>
-    <wire from="(2670,1480)" to="(2760,1480)"/>
     <wire from="(2500,2350)" to="(2640,2350)"/>
     <wire from="(1170,1480)" to="(1230,1480)"/>
     <wire from="(1370,870)" to="(1370,1000)"/>
@@ -479,6 +454,7 @@ end TCL_Generic;&#13;
     <wire from="(1590,1800)" to="(2020,1800)"/>
     <wire from="(1100,190)" to="(1100,220)"/>
     <wire from="(560,2690)" to="(1750,2690)"/>
+    <wire from="(2690,1490)" to="(2760,1490)"/>
     <wire from="(1370,520)" to="(1370,650)"/>
     <wire from="(1750,1220)" to="(1750,1360)"/>
     <wire from="(560,290)" to="(990,290)"/>
@@ -502,7 +478,6 @@ end TCL_Generic;&#13;
     <wire from="(1930,830)" to="(1930,850)"/>
     <wire from="(1900,2240)" to="(1900,2260)"/>
     <wire from="(1590,1450)" to="(2020,1450)"/>
-    <wire from="(2670,1580)" to="(2760,1580)"/>
     <wire from="(560,2340)" to="(1750,2340)"/>
     <wire from="(1750,2550)" to="(1870,2550)"/>
     <wire from="(2680,2060)" to="(2680,2120)"/>
@@ -1635,12 +1610,6 @@ end TCL_Generic;&#13;
       <a name="bit30" val="1"/>
       <a name="bit31" val="1"/>
     </comp>
-    <comp lib="0" loc="(2760,1580)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="width" val="5"/>
-      <a name="label" val="register_out_B_address"/>
-      <a name="labelloc" val="east"/>
-    </comp>
     <comp lib="0" loc="(2630,1750)" name="Splitter">
       <a name="incoming" val="32"/>
       <a name="appear" val="center"/>
@@ -2490,12 +2459,6 @@ end TCL_Generic;&#13;
       <a name="bit29" val="1"/>
       <a name="bit30" val="1"/>
       <a name="bit31" val="1"/>
-    </comp>
-    <comp lib="0" loc="(2760,1480)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="width" val="5"/>
-      <a name="label" val="register_out_A_address"/>
-      <a name="labelloc" val="east"/>
     </comp>
     <comp lib="0" loc="(2630,1320)" name="Splitter">
       <a name="incoming" val="32"/>
@@ -3624,6 +3587,38 @@ end TCL_Generic;&#13;
     </comp>
     <comp lib="1" loc="(290,1380)" name="NOT Gate">
       <a name="facing" val="south"/>
+    </comp>
+    <comp lib="0" loc="(2690,1490)" name="Splitter">
+      <a name="facing" val="west"/>
+      <a name="incoming" val="6"/>
+      <a name="appear" val="center"/>
+      <a name="bit1" val="0"/>
+      <a name="bit2" val="0"/>
+      <a name="bit3" val="0"/>
+      <a name="bit4" val="0"/>
+      <a name="bit5" val="1"/>
+    </comp>
+    <comp lib="0" loc="(2760,1490)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="width" val="6"/>
+      <a name="label" val="register_out_A_address"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(2690,1580)" name="Splitter">
+      <a name="facing" val="west"/>
+      <a name="incoming" val="6"/>
+      <a name="appear" val="center"/>
+      <a name="bit0" val="1"/>
+      <a name="bit2" val="1"/>
+      <a name="bit3" val="1"/>
+      <a name="bit4" val="1"/>
+      <a name="bit5" val="0"/>
+    </comp>
+    <comp lib="0" loc="(2760,1580)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="width" val="6"/>
+      <a name="label" val="register_out_B_address"/>
+      <a name="labelloc" val="east"/>
     </comp>
   </circuit>
 </project>

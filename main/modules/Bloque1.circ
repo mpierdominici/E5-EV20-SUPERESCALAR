@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <project source="2.14.6" version="1.0">
-  This file is intended to be loaded by Logisim-evolution (https://github.com/reds-heig/logisim-evolution).
-
-  <lib desc="#Wiring" name="0"/>
+This file is intended to be loaded by Logisim-evolution (https://github.com/reds-heig/logisim-evolution).
+<lib desc="#Wiring" name="0">
+    <tool name="Splitter">
+      <a name="appear" val="center"/>
+    </tool>
+    <tool name="Tunnel">
+      <a name="facing" val="north"/>
+    </tool>
+  </lib>
   <lib desc="#Gates" name="1"/>
   <lib desc="#Plexers" name="2">
     <tool name="Multiplexer">
@@ -131,82 +137,124 @@ end TCL_Generic;&#13;
     <a name="clabelfont" val="SansSerif bold 16"/>
     <a name="circuitnamedbox" val="true"/>
     <a name="circuitvhdlpath" val=""/>
-    <wire from="(290,260)" to="(350,260)"/>
-    <wire from="(440,220)" to="(440,290)"/>
-    <wire from="(640,220)" to="(640,230)"/>
-    <wire from="(240,240)" to="(300,240)"/>
-    <wire from="(300,250)" to="(350,250)"/>
-    <wire from="(490,230)" to="(490,370)"/>
-    <wire from="(490,190)" to="(490,200)"/>
-    <wire from="(240,250)" to="(290,250)"/>
-    <wire from="(270,270)" to="(270,280)"/>
-    <wire from="(320,220)" to="(320,230)"/>
-    <wire from="(310,230)" to="(310,240)"/>
-    <wire from="(300,240)" to="(300,250)"/>
-    <wire from="(290,250)" to="(290,260)"/>
-    <wire from="(280,260)" to="(280,270)"/>
-    <wire from="(260,280)" to="(260,290)"/>
-    <wire from="(340,210)" to="(340,220)"/>
-    <wire from="(240,130)" to="(350,130)"/>
-    <wire from="(240,150)" to="(350,150)"/>
-    <wire from="(240,170)" to="(350,170)"/>
-    <wire from="(240,190)" to="(350,190)"/>
-    <wire from="(240,140)" to="(350,140)"/>
-    <wire from="(240,160)" to="(350,160)"/>
-    <wire from="(240,180)" to="(350,180)"/>
-    <wire from="(240,200)" to="(350,200)"/>
-    <wire from="(240,260)" to="(280,260)"/>
-    <wire from="(310,240)" to="(350,240)"/>
-    <wire from="(220,290)" to="(220,320)"/>
-    <wire from="(240,210)" to="(340,210)"/>
-    <wire from="(140,370)" to="(490,370)"/>
-    <wire from="(240,270)" to="(270,270)"/>
-    <wire from="(260,290)" to="(350,290)"/>
-    <wire from="(530,240)" to="(530,410)"/>
-    <wire from="(350,290)" to="(440,290)"/>
-    <wire from="(320,230)" to="(350,230)"/>
-    <wire from="(490,200)" to="(510,200)"/>
-    <wire from="(490,230)" to="(510,230)"/>
-    <wire from="(550,220)" to="(640,220)"/>
-    <wire from="(240,280)" to="(260,280)"/>
-    <wire from="(200,320)" to="(220,320)"/>
-    <wire from="(400,210)" to="(410,210)"/>
-    <wire from="(340,220)" to="(350,220)"/>
-    <wire from="(240,220)" to="(320,220)"/>
-    <wire from="(270,280)" to="(350,280)"/>
-    <wire from="(140,410)" to="(530,410)"/>
-    <wire from="(240,230)" to="(310,230)"/>
-    <wire from="(440,210)" to="(510,210)"/>
-    <wire from="(440,220)" to="(510,220)"/>
-    <wire from="(280,270)" to="(350,270)"/>
-    <comp lib="0" loc="(640,230)" name="Pin">
+    <appear>
+      <rect height="4" stroke="none" width="10" x="50" y="78"/>
+      <text fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="65" y="84">register_to_test</text>
+      <rect height="3" stroke="none" width="10" x="50" y="99"/>
+      <text fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="65" y="104">CY</text>
+      <rect height="4" stroke="none" width="10" x="50" y="58"/>
+      <text fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="65" y="64">jump_type</text>
+      <rect height="3" stroke="none" width="10" x="270" y="59"/>
+      <text fill="#404040" font-family="Dialog" font-size="12" text-anchor="end" x="265" y="64">Preload</text>
+      <circ-port height="10" pin="690,160" width="10" x="275" y="55"/>
+      <circ-port height="8" pin="190,340" width="8" x="46" y="56"/>
+      <circ-port height="8" pin="190,300" width="8" x="46" y="96"/>
+      <circ-port height="8" pin="250,250" width="8" x="46" y="76"/>
+      <rect height="20" stroke="none" width="210" x="60" y="110"/>
+      <rect fill="none" height="80" stroke="#000000" stroke-width="2" width="210" x="60" y="50"/>
+      <text fill="#ffffff" font-family="Dialog" font-size="14" font-weight="bold" text-anchor="middle" x="165" y="124">Bloque1</text>
+      <circ-anchor facing="east" height="6" width="6" x="277" y="57"/>
+    </appear>
+    <wire from="(690,150)" to="(690,160)"/>
+    <wire from="(290,170)" to="(350,170)"/>
+    <wire from="(340,190)" to="(400,190)"/>
+    <wire from="(490,150)" to="(490,220)"/>
+    <wire from="(540,120)" to="(540,130)"/>
+    <wire from="(540,160)" to="(540,300)"/>
+    <wire from="(290,180)" to="(340,180)"/>
+    <wire from="(350,180)" to="(400,180)"/>
+    <wire from="(320,200)" to="(320,210)"/>
+    <wire from="(310,210)" to="(310,220)"/>
+    <wire from="(370,150)" to="(370,160)"/>
+    <wire from="(360,160)" to="(360,170)"/>
+    <wire from="(350,170)" to="(350,180)"/>
+    <wire from="(340,180)" to="(340,190)"/>
+    <wire from="(330,190)" to="(330,200)"/>
+    <wire from="(390,140)" to="(390,150)"/>
+    <wire from="(290,60)" to="(400,60)"/>
+    <wire from="(290,80)" to="(400,80)"/>
+    <wire from="(290,100)" to="(400,100)"/>
+    <wire from="(290,120)" to="(400,120)"/>
+    <wire from="(290,70)" to="(400,70)"/>
+    <wire from="(290,90)" to="(400,90)"/>
+    <wire from="(290,110)" to="(400,110)"/>
+    <wire from="(290,130)" to="(400,130)"/>
+    <wire from="(290,140)" to="(390,140)"/>
+    <wire from="(270,220)" to="(270,250)"/>
+    <wire from="(290,190)" to="(330,190)"/>
+    <wire from="(360,170)" to="(400,170)"/>
+    <wire from="(400,220)" to="(490,220)"/>
+    <wire from="(190,300)" to="(540,300)"/>
+    <wire from="(310,220)" to="(400,220)"/>
+    <wire from="(580,170)" to="(580,340)"/>
+    <wire from="(540,130)" to="(560,130)"/>
+    <wire from="(540,160)" to="(560,160)"/>
+    <wire from="(290,200)" to="(320,200)"/>
+    <wire from="(370,160)" to="(400,160)"/>
+    <wire from="(290,210)" to="(310,210)"/>
+    <wire from="(600,150)" to="(690,150)"/>
+    <wire from="(250,250)" to="(270,250)"/>
+    <wire from="(450,140)" to="(460,140)"/>
+    <wire from="(390,150)" to="(400,150)"/>
+    <wire from="(290,150)" to="(370,150)"/>
+    <wire from="(320,210)" to="(400,210)"/>
+    <wire from="(190,340)" to="(580,340)"/>
+    <wire from="(490,140)" to="(560,140)"/>
+    <wire from="(490,150)" to="(560,150)"/>
+    <wire from="(290,160)" to="(360,160)"/>
+    <wire from="(330,200)" to="(400,200)"/>
+    <comp lib="0" loc="(690,160)" name="Pin">
       <a name="facing" val="north"/>
       <a name="output" val="true"/>
       <a name="label" val="Preload"/>
     </comp>
-    <comp lib="0" loc="(220,290)" name="Splitter">
+    <comp lib="0" loc="(190,300)" name="Pin">
+      <a name="label" val="CY"/>
+    </comp>
+    <comp lib="0" loc="(190,340)" name="Pin">
+      <a name="width" val="2"/>
+      <a name="label" val="jump_type"/>
+    </comp>
+    <comp lib="0" loc="(270,220)" name="Splitter">
       <a name="fanout" val="16"/>
       <a name="incoming" val="16"/>
     </comp>
-    <comp lib="0" loc="(490,190)" name="Power"/>
-    <comp lib="2" loc="(550,220)" name="Multiplexer">
+    <comp lib="1" loc="(450,140)" name="OR Gate">
+      <a name="inputs" val="16"/>
+    </comp>
+    <comp lib="1" loc="(490,140)" name="NOT Gate"/>
+    <comp lib="2" loc="(600,150)" name="Multiplexer">
       <a name="select" val="2"/>
       <a name="enable" val="false"/>
     </comp>
-    <comp lib="1" loc="(400,210)" name="OR Gate">
-      <a name="inputs" val="16"/>
-    </comp>
-    <comp lib="1" loc="(440,210)" name="NOT Gate"/>
-    <comp lib="0" loc="(140,410)" name="Pin">
-      <a name="width" val="2"/>
-      <a name="label" val="B12B11"/>
-    </comp>
-    <comp lib="0" loc="(140,370)" name="Pin">
-      <a name="label" val="CY"/>
-    </comp>
-    <comp lib="0" loc="(200,320)" name="Pin">
+    <comp lib="0" loc="(250,250)" name="Pin">
       <a name="width" val="16"/>
-      <a name="label" val="WRegister"/>
+      <a name="label" val="register_to_test"/>
+    </comp>
+    <comp lib="0" loc="(540,120)" name="Power"/>
+    <comp lib="8" loc="(107,434)" name="Text">
+      <a name="font" val="SansSerif plain 12"/>
+      <a name="halign" val="left"/>
+    </comp>
+    <comp lib="8" loc="(136,415)" name="Text">
+      <a name="text" val="01: jump if carry"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="8" loc="(143,431)" name="Text">
+      <a name="text" val="10: jump if negative"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="8" loc="(121,379)" name="Text">
+      <a name="text" val="jump type:"/>
+      <a name="font" val="SansSerif bold 12"/>
+    </comp>
+    <comp lib="8" loc="(136,399)" name="Text">
+      <a name="text" val="00: jump always"/>
+      <a name="font" val="SansSerif plain 12"/>
+    </comp>
+    <comp lib="8" loc="(132,446)" name="Text">
+      <a name="text" val="11: jump if zero"/>
+      <a name="font" val="SansSerif plain 12"/>
     </comp>
   </circuit>
 </project>

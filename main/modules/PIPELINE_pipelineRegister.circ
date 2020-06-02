@@ -138,6 +138,7 @@ end TCL_Generic;
     <a name="circuitnamedbox" val="true"/>
     <a name="circuitvhdlpath" val=""/>
     <appear>
+      <rect fill="#d5d4ff" height="277" stroke="#000000" stroke-width="2" width="231" x="60" y="13"/>
       <rect height="3" stroke="none" width="10" x="50" y="229"/>
       <text fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="65" y="234">Hold</text>
       <rect height="3" stroke="none" width="10" x="50" y="249"/>
@@ -149,39 +150,38 @@ end TCL_Generic;
       <rect height="3" stroke="none" width="10" x="290" y="69"/>
       <text fill="#404040" font-family="Dialog" font-size="12" text-anchor="end" x="285" y="74">Kmx_OUT</text>
       <rect height="4" stroke="none" width="10" x="290" y="88"/>
-      <circ-port height="10" pin="710,540" width="10" x="295" y="85"/>
-      <circ-port height="10" pin="710,430" width="10" x="295" y="65"/>
-      <circ-port height="10" pin="710,310" width="10" x="295" y="45"/>
       <circ-port height="10" pin="710,200" width="10" x="295" y="25"/>
-      <circ-port height="8" pin="190,1100" width="8" x="46" y="186"/>
-      <circ-port height="8" pin="190,990" width="8" x="46" y="166"/>
-      <circ-port height="8" pin="190,870" width="8" x="46" y="146"/>
-      <circ-port height="8" pin="190,760" width="8" x="46" y="126"/>
-      <circ-port height="8" pin="190,650" width="8" x="46" y="106"/>
-      <circ-port height="8" pin="190,540" width="8" x="46" y="86"/>
-      <circ-port height="8" pin="190,430" width="8" x="46" y="66"/>
+      <circ-port height="8" pin="190,760" width="8" x="46" y="176"/>
       <circ-port height="8" pin="190,310" width="8" x="46" y="46"/>
-      <circ-port height="8" pin="190,200" width="8" x="46" y="26"/>
-      <circ-port height="8" pin="190,120" width="8" x="46" y="246"/>
-      <circ-port height="8" pin="190,80" width="8" x="46" y="226"/>
       <text fill="#404040" font-family="Dialog" font-size="12" text-anchor="end" x="285" y="94">MRyMW_OUT</text>
+      <rect height="4" stroke="none" width="10" x="290" y="158"/>
+      <text fill="#404040" font-family="Dialog" font-size="12" text-anchor="end" x="285" y="164">A_bus_OUT</text>
+      <rect height="4" stroke="none" width="10" x="290" y="178"/>
+      <text fill="#404040" font-family="Dialog" font-size="12" text-anchor="end" x="285" y="184">B_bus_OUT</text>
+      <rect height="4" stroke="none" width="10" x="290" y="198"/>
+      <text fill="#404040" font-family="Dialog" font-size="12" text-anchor="end" x="285" y="204">C_bus_OUT</text>
       <rect height="4" stroke="none" width="10" x="290" y="108"/>
-      <circ-port height="10" pin="710,650" width="10" x="295" y="105"/>
-      <text fill="#404040" font-family="Dialog" font-size="12" text-anchor="end" x="285" y="114">B_bus_OUT</text>
+      <text fill="#404040" font-family="Dialog" font-size="12" text-anchor="end" x="285" y="114">T_bus_OUT</text>
       <rect height="4" stroke="none" width="10" x="290" y="128"/>
-      <circ-port height="10" pin="710,760" width="10" x="295" y="125"/>
-      <text fill="#404040" font-family="Dialog" font-size="12" text-anchor="end" x="285" y="134">T_bus_OUT</text>
-      <rect height="4" stroke="none" width="10" x="290" y="148"/>
-      <circ-port height="10" pin="710,870" width="10" x="295" y="145"/>
-      <text fill="#404040" font-family="Dialog" font-size="12" text-anchor="end" x="285" y="154">C_bus_OUT</text>
-      <rect height="4" stroke="none" width="10" x="290" y="168"/>
-      <circ-port height="10" pin="710,990" width="10" x="295" y="165"/>
-      <text fill="#404040" font-family="Dialog" font-size="12" text-anchor="end" x="285" y="174">D_bus_OUT</text>
-      <rect height="4" stroke="none" width="10" x="290" y="188"/>
-      <circ-port height="10" pin="710,1100" width="10" x="295" y="185"/>
-      <text fill="#404040" font-family="Dialog" font-size="12" text-anchor="end" x="285" y="194">D_Address_OUT</text>
+      <text fill="#404040" font-family="Dialog" font-size="12" text-anchor="end" x="285" y="134">D_Address_OUT</text>
       <rect height="20" stroke="none" width="230" x="60" y="270"/>
-      <rect fill="none" height="277" stroke="#000000" stroke-width="2" width="231" x="60" y="13"/>
+      <circ-port height="10" pin="710,1100" width="10" x="295" y="125"/>
+      <circ-port height="10" pin="710,870" width="10" x="295" y="195"/>
+      <circ-port height="10" pin="710,650" width="10" x="295" y="155"/>
+      <circ-port height="8" pin="190,200" width="8" x="46" y="26"/>
+      <circ-port height="8" pin="190,650" width="8" x="46" y="156"/>
+      <circ-port height="8" pin="190,1100" width="8" x="46" y="126"/>
+      <circ-port height="10" pin="710,540" width="10" x="295" y="85"/>
+      <circ-port height="10" pin="710,310" width="10" x="295" y="45"/>
+      <circ-port height="8" pin="190,870" width="8" x="46" y="196"/>
+      <circ-port height="8" pin="190,430" width="8" x="46" y="66"/>
+      <circ-port height="8" pin="190,80" width="8" x="46" y="226"/>
+      <circ-port height="10" pin="710,760" width="10" x="295" y="175"/>
+      <circ-port height="10" pin="710,990" width="10" x="295" y="105"/>
+      <circ-port height="8" pin="190,120" width="8" x="46" y="246"/>
+      <circ-port height="8" pin="190,540" width="8" x="46" y="86"/>
+      <circ-port height="8" pin="190,990" width="8" x="46" y="106"/>
+      <circ-port height="10" pin="710,430" width="10" x="295" y="65"/>
       <text fill="#ffffff" font-family="Dialog" font-size="14" font-weight="bold" text-anchor="middle" x="175" y="284">Pipeline_register</text>
       <text fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="65" y="34">ALUC_IN</text>
       <rect height="4" stroke="none" width="10" x="50" y="28"/>
@@ -191,16 +191,16 @@ end TCL_Generic;
       <text fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="65" y="74">Kmx_IN</text>
       <rect height="4" stroke="none" width="10" x="50" y="88"/>
       <text fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="65" y="94">MRyMW_IN</text>
+      <rect height="4" stroke="none" width="10" x="50" y="158"/>
+      <text fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="65" y="164">A_bus_IN</text>
+      <rect height="4" stroke="none" width="10" x="50" y="178"/>
+      <text fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="65" y="184">B_bus_IN</text>
+      <rect height="4" stroke="none" width="10" x="50" y="198"/>
+      <text fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="65" y="204">C_bus_IN</text>
       <rect height="4" stroke="none" width="10" x="50" y="108"/>
-      <text fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="65" y="114">A_bus_IN</text>
+      <text fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="65" y="114">T_bus_IN</text>
       <rect height="4" stroke="none" width="10" x="50" y="128"/>
-      <text fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="65" y="134">B_bus_IN</text>
-      <rect height="4" stroke="none" width="10" x="50" y="148"/>
-      <text fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="65" y="154">C_bus_IN</text>
-      <rect height="4" stroke="none" width="10" x="50" y="168"/>
-      <text fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="65" y="174">D_bus_IN</text>
-      <rect height="4" stroke="none" width="10" x="50" y="188"/>
-      <text fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="65" y="194">D_Address_IN</text>
+      <text fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="65" y="134">D_Address_IN</text>
       <circ-anchor facing="east" height="6" width="6" x="297" y="27"/>
     </appear>
     <wire from="(190,870)" to="(500,870)"/>
@@ -210,8 +210,8 @@ end TCL_Generic;
     <wire from="(190,650)" to="(500,650)"/>
     <wire from="(460,80)" to="(460,220)"/>
     <wire from="(340,80)" to="(460,80)"/>
-    <wire from="(400,240)" to="(500,240)"/>
     <wire from="(400,800)" to="(500,800)"/>
+    <wire from="(400,240)" to="(500,240)"/>
     <wire from="(400,1140)" to="(500,1140)"/>
     <wire from="(400,580)" to="(500,580)"/>
     <wire from="(460,450)" to="(500,450)"/>
