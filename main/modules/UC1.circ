@@ -142,18 +142,28 @@ end TCL_Generic;
     <wire from="(480,340)" to="(480,410)"/>
     <wire from="(380,380)" to="(380,450)"/>
     <wire from="(330,380)" to="(380,380)"/>
-    <wire from="(570,430)" to="(630,430)"/>
     <wire from="(570,360)" to="(630,360)"/>
     <wire from="(200,380)" to="(250,380)"/>
+    <wire from="(630,480)" to="(690,480)"/>
+    <wire from="(190,520)" to="(560,520)"/>
     <wire from="(290,380)" to="(290,390)"/>
-    <wire from="(480,410)" to="(510,410)"/>
+    <wire from="(540,480)" to="(580,480)"/>
+    <wire from="(380,360)" to="(380,380)"/>
+    <wire from="(540,450)" to="(540,480)"/>
+    <wire from="(190,470)" to="(490,470)"/>
+    <wire from="(560,500)" to="(560,520)"/>
+    <wire from="(490,380)" to="(490,470)"/>
+    <wire from="(480,410)" to="(570,410)"/>
+    <wire from="(560,500)" to="(580,500)"/>
     <wire from="(480,340)" to="(510,340)"/>
+    <wire from="(490,380)" to="(520,380)"/>
     <wire from="(270,370)" to="(300,370)"/>
+    <wire from="(380,450)" to="(540,450)"/>
     <wire from="(270,380)" to="(290,380)"/>
     <wire from="(200,340)" to="(480,340)"/>
     <wire from="(290,390)" to="(300,390)"/>
-    <wire from="(380,450)" to="(520,450)"/>
-    <wire from="(380,380)" to="(510,380)"/>
+    <wire from="(570,410)" to="(570,460)"/>
+    <wire from="(380,360)" to="(510,360)"/>
     <comp lib="0" loc="(250,380)" name="Splitter">
       <a name="appear" val="center"/>
     </comp>
@@ -163,12 +173,6 @@ end TCL_Generic;
     </comp>
     <comp lib="0" loc="(200,340)" name="Pin">
       <a name="label" val="HOLD"/>
-    </comp>
-    <comp lib="0" loc="(630,430)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="label" val="LoadStoreEnable"/>
-      <a name="labelloc" val="east"/>
     </comp>
     <comp lib="1" loc="(330,380)" name="OR Gate">
       <a name="size" val="30"/>
@@ -180,12 +184,26 @@ end TCL_Generic;
       <a name="label" val="ALUEnable"/>
       <a name="labelloc" val="east"/>
     </comp>
-    <comp lib="1" loc="(570,430)" name="AND Gate">
-      <a name="negate0" val="true"/>
-    </comp>
     <comp lib="1" loc="(570,360)" name="AND Gate">
+      <a name="inputs" val="3"/>
       <a name="negate0" val="true"/>
       <a name="negate1" val="true"/>
+    </comp>
+    <comp lib="0" loc="(190,470)" name="Pin">
+      <a name="label" val="ALUisFree"/>
+    </comp>
+    <comp lib="0" loc="(190,520)" name="Pin">
+      <a name="label" val="MEMisFree"/>
+    </comp>
+    <comp lib="0" loc="(690,480)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="LoadStoreEnable"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="1" loc="(630,480)" name="AND Gate">
+      <a name="inputs" val="3"/>
+      <a name="negate0" val="true"/>
     </comp>
   </circuit>
 </project>
