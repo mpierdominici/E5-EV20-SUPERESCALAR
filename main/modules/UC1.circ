@@ -8,6 +8,11 @@ This file is intended to be loaded by Logisim-evolution (https://github.com/reds
     <tool name="Tunnel">
       <a name="facing" val="north"/>
     </tool>
+    <tool name="Constant">
+      <a name="facing" val="north"/>
+      <a name="width" val="25"/>
+      <a name="value" val="0x1ffffff"/>
+    </tool>
   </lib>
   <lib desc="#Gates" name="1"/>
   <lib desc="#Plexers" name="2">
@@ -141,19 +146,26 @@ end TCL_Generic;
     <a name="circuitvhdlpath" val=""/>
     <wire from="(480,340)" to="(480,410)"/>
     <wire from="(380,380)" to="(380,450)"/>
-    <wire from="(330,380)" to="(380,380)"/>
+    <wire from="(340,620)" to="(340,690)"/>
     <wire from="(570,360)" to="(630,360)"/>
+    <wire from="(380,650)" to="(380,660)"/>
     <wire from="(200,380)" to="(250,380)"/>
     <wire from="(630,480)" to="(690,480)"/>
-    <wire from="(190,520)" to="(560,520)"/>
+    <wire from="(340,690)" to="(460,690)"/>
     <wire from="(290,380)" to="(290,390)"/>
     <wire from="(540,480)" to="(580,480)"/>
+    <wire from="(520,600)" to="(560,600)"/>
+    <wire from="(520,640)" to="(560,640)"/>
     <wire from="(380,360)" to="(380,380)"/>
     <wire from="(540,450)" to="(540,480)"/>
+    <wire from="(520,640)" to="(520,670)"/>
+    <wire from="(350,580)" to="(460,580)"/>
     <wire from="(190,470)" to="(490,470)"/>
     <wire from="(560,500)" to="(560,520)"/>
     <wire from="(490,380)" to="(490,470)"/>
+    <wire from="(340,380)" to="(380,380)"/>
     <wire from="(480,410)" to="(570,410)"/>
+    <wire from="(190,520)" to="(350,520)"/>
     <wire from="(560,500)" to="(580,500)"/>
     <wire from="(480,340)" to="(510,340)"/>
     <wire from="(490,380)" to="(520,380)"/>
@@ -161,9 +173,17 @@ end TCL_Generic;
     <wire from="(380,450)" to="(540,450)"/>
     <wire from="(270,380)" to="(290,380)"/>
     <wire from="(200,340)" to="(480,340)"/>
+    <wire from="(350,520)" to="(560,520)"/>
+    <wire from="(460,650)" to="(470,650)"/>
     <wire from="(290,390)" to="(300,390)"/>
+    <wire from="(330,380)" to="(340,380)"/>
+    <wire from="(340,380)" to="(340,620)"/>
+    <wire from="(380,650)" to="(460,650)"/>
+    <wire from="(610,620)" to="(740,620)"/>
+    <wire from="(350,520)" to="(350,580)"/>
     <wire from="(570,410)" to="(570,460)"/>
     <wire from="(380,360)" to="(510,360)"/>
+    <wire from="(340,620)" to="(470,620)"/>
     <comp lib="0" loc="(250,380)" name="Splitter">
       <a name="appear" val="center"/>
     </comp>
@@ -204,6 +224,22 @@ end TCL_Generic;
     <comp lib="1" loc="(630,480)" name="AND Gate">
       <a name="inputs" val="3"/>
       <a name="negate0" val="true"/>
+    </comp>
+    <comp lib="1" loc="(520,600)" name="AND Gate">
+      <a name="negate0" val="true"/>
+    </comp>
+    <comp lib="1" loc="(520,670)" name="AND Gate">
+      <a name="negate0" val="true"/>
+      <a name="negate1" val="true"/>
+    </comp>
+    <comp lib="1" loc="(610,620)" name="OR Gate"/>
+    <comp lib="0" loc="(740,620)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="Hold2"/>
+    </comp>
+    <comp lib="0" loc="(380,660)" name="Constant">
+      <a name="facing" val="north"/>
     </comp>
   </circuit>
 </project>
