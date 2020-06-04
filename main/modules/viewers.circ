@@ -146,10 +146,35 @@ end TCL_Generic;&#13;
     <a name="circuitnamedbox" val="true"/>
     <a name="circuitvhdlpath" val=""/>
     <appear>
-      <rect fill="#ffe3f8" height="622" stroke="#000000" stroke-width="2" width="329" x="65" y="128"/>
-      <rect fill="#cddeff" height="257" stroke="#000000" width="100" x="211" y="136"/>
-      <rect fill="#cddeff" height="319" stroke="#000000" width="131" x="73" y="400"/>
-      <rect fill="#cddeff" height="320" stroke="#000000" width="99" x="211" y="400"/>
+      <rect fill="#ffe3f8" height="40" stroke="none" width="77" x="126" y="702"/>
+      <rect fill="#ffe3f8" height="309" stroke="none" width="63" x="280" y="426"/>
+      <rect fill="#ffe3f8" height="79" stroke="none" width="202" x="192" y="672"/>
+      <rect fill="#ffe3f8" height="309" stroke="none" width="63" x="66" y="427"/>
+      <rect fill="#ffe3f8" height="309" stroke="none" width="63" x="192" y="433"/>
+      <rect fill="#ffe3f8" height="79" stroke="none" width="198" x="192" y="379"/>
+      <rect fill="#ffe3f8" height="623" stroke="none" width="95" x="299" y="128"/>
+      <rect fill="#ffe3f8" height="75" stroke="none" width="186" x="195" y="129"/>
+      <rect fill="#ffe3f8" height="311" stroke="none" width="194" x="66" y="129"/>
+      <rect fill="#cddeff" height="14" stroke="none" width="55" x="252" y="379"/>
+      <rect fill="#cddeff" height="256" stroke="none" width="11" x="300" y="137"/>
+      <rect fill="#cddeff" height="65" stroke="none" width="79" x="228" y="137"/>
+      <rect fill="#cddeff" height="256" stroke="none" width="48" x="212" y="137"/>
+      <rect fill="#cddeff" height="17" stroke="none" width="74" x="125" y="702"/>
+      <rect fill="#cddeff" height="28" stroke="none" width="77" x="117" y="601"/>
+      <rect fill="#cddeff" height="16" stroke="none" width="78" x="117" y="512"/>
+      <rect fill="#cddeff" height="317" stroke="none" width="12" x="191" y="401"/>
+      <rect fill="#cddeff" height="37" stroke="none" width="79" x="120" y="402"/>
+      <rect fill="#cddeff" height="317" stroke="none" width="55" x="74" y="401"/>
+      <rect fill="#cddeff" height="57" stroke="none" width="59" x="237" y="401"/>
+      <rect fill="#cddeff" height="72" stroke="none" width="48" x="241" y="575"/>
+      <rect fill="#cddeff" height="48" stroke="none" width="45" x="246" y="672"/>
+      <rect fill="#cddeff" height="319" stroke="none" width="29" x="280" y="401"/>
+      <rect fill="#cddeff" height="317" stroke="none" width="41" x="213" y="402"/>
+      <rect fill="#cddeff" height="65" stroke="none" width="51" x="249" y="481"/>
+      <rect fill="none" height="622" stroke="#000000" stroke-width="2" width="329" x="65" y="128"/>
+      <rect fill="none" height="257" stroke="#000000" width="100" x="211" y="136"/>
+      <rect fill="none" height="319" stroke="#000000" width="131" x="73" y="400"/>
+      <rect fill="none" height="320" stroke="#000000" width="99" x="211" y="400"/>
       <rect height="22" stroke="none" width="329" x="65" y="729"/>
       <rect height="4" stroke="none" width="10" x="60" y="318"/>
       <text fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="75" y="324">microinstr</text>
@@ -195,13 +220,13 @@ end TCL_Generic;&#13;
       <text fill="#404040" font-family="Dialog" font-size="12" text-anchor="end" x="245" y="374">b0</text>
       <rect height="3" stroke="none" width="10" x="250" y="559"/>
       <circ-port height="10" pin="1310,300" width="10" x="255" y="305"/>
-      <text fill="#404040" font-family="Dialog" font-size="12" text-anchor="end" x="298" y="540">A_is_enabled</text>
+      <text fill="#404040" font-family="Dialog" font-size="12" text-anchor="middle" x="261" y="539">A_is_enabled</text>
       <rect height="4" stroke="none" width="10" x="120" y="538"/>
       <text fill="#404040" font-family="Dialog" font-size="12" text-anchor="end" x="115" y="544">A_MSN</text>
       <rect height="4" stroke="none" width="10" x="120" y="578"/>
       <text fill="#404040" font-family="Dialog" font-size="12" text-anchor="end" x="115" y="584">A_LSN</text>
       <rect height="3" stroke="none" width="10" x="250" y="659"/>
-      <text fill="#404040" font-family="Dialog" font-size="12" text-anchor="end" x="299" y="641">B_is_enabled</text>
+      <text fill="#404040" font-family="Dialog" font-size="12" text-anchor="middle" x="261" y="641">B_is_enabled</text>
       <rect height="4" stroke="none" width="10" x="120" y="638"/>
       <circ-port height="10" pin="1710,2560" width="10" x="255" y="555"/>
       <circ-port height="10" pin="1350,320" width="10" x="255" y="315"/>
@@ -234,7 +259,7 @@ end TCL_Generic;&#13;
       <text fill="#404040" font-family="Dialog" font-size="12" text-anchor="end" x="115" y="684">B_LSN</text>
       <rect height="3" stroke="none" width="10" x="250" y="469"/>
       <circ-port height="10" pin="1710,2800" width="10" x="255" y="465"/>
-      <text fill="#404040" font-family="Dialog" font-size="12" text-anchor="end" x="299" y="453">C_is_enabled</text>
+      <text fill="#404040" font-family="Dialog" font-size="12" text-anchor="middle" x="262" y="452">C_is_enabled</text>
       <rect height="4" stroke="none" width="10" x="120" y="448"/>
       <circ-port height="10" pin="1710,2840" width="10" x="125" y="445"/>
       <text fill="#404040" font-family="Dialog" font-size="12" text-anchor="end" x="115" y="454">C_MSN</text>
