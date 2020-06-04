@@ -72,20 +72,20 @@ end type_architecture;&#13;
   </lib>
   <lib desc="#TCL" name="7">
     <tool name="TclGeneric">
-      <a name="content">library ieee;
-use ieee.std_logic_1164.all;
-
-entity TCL_Generic is
-  port(
-    --Insert input ports below
-    horloge_i  : in  std_logic;                    -- input bit example
-    val_i      : in  std_logic_vector(3 downto 0); -- input vector example
-
-	  --Insert output ports below
-    max_o      : out std_logic;                    -- output bit example
-    cpt_o      : out std_logic_Vector(3 downto 0)  -- output vector example
-  );
-end TCL_Generic;
+      <a name="content">library ieee;&#13;
+use ieee.std_logic_1164.all;&#13;
+&#13;
+entity TCL_Generic is&#13;
+  port(&#13;
+    --Insert input ports below&#13;
+    horloge_i  : in  std_logic;                    -- input bit example&#13;
+    val_i      : in  std_logic_vector(3 downto 0); -- input vector example&#13;
+&#13;
+	  --Insert output ports below&#13;
+    max_o      : out std_logic;                    -- output bit example&#13;
+    cpt_o      : out std_logic_Vector(3 downto 0)  -- output vector example&#13;
+  );&#13;
+end TCL_Generic;&#13;
 </a>
     </tool>
   </lib>
@@ -98,7 +98,11 @@ end TCL_Generic;
     </tool>
   </lib>
   <lib desc="#BFH-Praktika" name="9"/>
-  <main name="UC1"/>
+  <lib desc="file#Selector_A.circ" name="10"/>
+  <lib desc="file#Selector_B_.circ" name="11"/>
+  <lib desc="file#Selector_C.circ" name="12"/>
+  <lib desc="file#Selector_K.circ" name="13"/>
+  <main name="instruction2register"/>
   <options>
     <a name="gateUndefined" val="ignore"/>
     <a name="simlimit" val="1000"/>
@@ -126,84 +130,71 @@ end TCL_Generic;
       <a name="output" val="true"/>
       <a name="labelloc" val="east"/>
     </tool>
-    <tool lib="1" name="NOT Gate">
-      <a name="size" val="20"/>
-    </tool>
+    <tool lib="1" name="NOT Gate"/>
     <tool lib="1" name="AND Gate"/>
     <tool lib="1" name="OR Gate"/>
   </toolbar>
-  <circuit name="UC1">
-    <a name="circuit" val="UC1"/>
+  <circuit name="instruction2register">
+    <a name="circuit" val="instruction2register"/>
     <a name="clabel" val=""/>
     <a name="clabelup" val="east"/>
     <a name="clabelfont" val="SansSerif bold 16"/>
     <a name="circuitnamedbox" val="true"/>
     <a name="circuitvhdlpath" val=""/>
-    <wire from="(480,340)" to="(480,410)"/>
-    <wire from="(380,380)" to="(380,450)"/>
-    <wire from="(330,380)" to="(380,380)"/>
-    <wire from="(570,360)" to="(630,360)"/>
-    <wire from="(200,380)" to="(250,380)"/>
-    <wire from="(630,480)" to="(690,480)"/>
-    <wire from="(190,520)" to="(560,520)"/>
-    <wire from="(290,380)" to="(290,390)"/>
-    <wire from="(540,480)" to="(580,480)"/>
-    <wire from="(380,360)" to="(380,380)"/>
-    <wire from="(540,450)" to="(540,480)"/>
-    <wire from="(190,470)" to="(490,470)"/>
-    <wire from="(560,500)" to="(560,520)"/>
-    <wire from="(490,380)" to="(490,470)"/>
-    <wire from="(480,410)" to="(570,410)"/>
-    <wire from="(560,500)" to="(580,500)"/>
-    <wire from="(480,340)" to="(510,340)"/>
-    <wire from="(490,380)" to="(520,380)"/>
-    <wire from="(270,370)" to="(300,370)"/>
-    <wire from="(380,450)" to="(540,450)"/>
-    <wire from="(270,380)" to="(290,380)"/>
-    <wire from="(200,340)" to="(480,340)"/>
-    <wire from="(290,390)" to="(300,390)"/>
-    <wire from="(570,410)" to="(570,460)"/>
-    <wire from="(380,360)" to="(510,360)"/>
-    <comp lib="0" loc="(250,380)" name="Splitter">
-      <a name="appear" val="center"/>
+    <wire from="(290,250)" to="(290,350)"/>
+    <wire from="(770,100)" to="(890,100)"/>
+    <wire from="(680,250)" to="(890,250)"/>
+    <wire from="(290,350)" to="(480,350)"/>
+    <wire from="(240,220)" to="(290,220)"/>
+    <wire from="(290,200)" to="(290,220)"/>
+    <wire from="(780,350)" to="(880,350)"/>
+    <wire from="(630,150)" to="(890,150)"/>
+    <wire from="(290,150)" to="(290,200)"/>
+    <wire from="(290,100)" to="(290,150)"/>
+    <wire from="(600,200)" to="(890,200)"/>
+    <wire from="(290,220)" to="(290,250)"/>
+    <wire from="(290,150)" to="(490,150)"/>
+    <wire from="(290,200)" to="(490,200)"/>
+    <wire from="(290,250)" to="(490,250)"/>
+    <wire from="(290,100)" to="(490,100)"/>
+    <comp lib="0" loc="(240,220)" name="Pin">
+      <a name="width" val="24"/>
+      <a name="label" val="Instruction"/>
     </comp>
-    <comp lib="0" loc="(200,380)" name="Pin">
-      <a name="width" val="2"/>
-      <a name="label" val="MRyMW_OUT_E1"/>
-    </comp>
-    <comp lib="0" loc="(200,340)" name="Pin">
-      <a name="label" val="HOLD"/>
-    </comp>
-    <comp lib="1" loc="(330,380)" name="OR Gate">
-      <a name="size" val="30"/>
-    </comp>
-    <comp lib="0" loc="(630,360)" name="Pin">
+    <comp lib="10" loc="(630,150)" name="Selector_A"/>
+    <comp lib="11" loc="(600,200)" name="Selector_B"/>
+    <comp lib="12" loc="(680,250)" name="Selector_C"/>
+    <comp lib="0" loc="(890,250)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
-      <a name="tristate" val="true"/>
-      <a name="label" val="ALUEnable"/>
-      <a name="labelloc" val="east"/>
+      <a name="width" val="6"/>
+      <a name="label" val="C"/>
     </comp>
-    <comp lib="1" loc="(570,360)" name="AND Gate">
-      <a name="inputs" val="3"/>
-      <a name="negate0" val="true"/>
-      <a name="negate1" val="true"/>
-    </comp>
-    <comp lib="0" loc="(190,470)" name="Pin">
-      <a name="label" val="ALUisFree"/>
-    </comp>
-    <comp lib="0" loc="(190,520)" name="Pin">
-      <a name="label" val="MEMisFree"/>
-    </comp>
-    <comp lib="0" loc="(690,480)" name="Pin">
+    <comp lib="0" loc="(890,200)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
-      <a name="label" val="LoadStoreEnable"/>
-      <a name="labelloc" val="east"/>
+      <a name="width" val="6"/>
+      <a name="label" val="B"/>
     </comp>
-    <comp lib="1" loc="(630,480)" name="AND Gate">
-      <a name="inputs" val="3"/>
-      <a name="negate0" val="true"/>
+    <comp lib="0" loc="(890,150)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="6"/>
+      <a name="label" val="A"/>
+    </comp>
+    <comp lib="13" loc="(770,100)" name="Selector_D"/>
+    <comp lib="0" loc="(890,100)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="10"/>
+      <a name="label" val="Daddresss"/>
+    </comp>
+    <comp lib="13" loc="(780,350)" name="selector_K"/>
+    <comp lib="0" loc="(880,350)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="16"/>
+      <a name="label" val="K"/>
     </comp>
   </circuit>
 </project>
