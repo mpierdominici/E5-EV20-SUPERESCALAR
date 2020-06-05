@@ -15,6 +15,11 @@ This file is intended to be loaded by Logisim-evolution (https://github.com/reds
     <tool name="Tunnel">
       <a name="facing" val="north"/>
     </tool>
+    <tool name="Constant">
+      <a name="facing" val="north"/>
+      <a name="width" val="25"/>
+      <a name="value" val="0x1ffffff"/>
+    </tool>
   </lib>
   <lib desc="#Gates" name="1"/>
   <lib desc="#Plexers" name="2">
@@ -157,16 +162,16 @@ end TCL_Generic;&#13;
       <text fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="65" y="144">register_out_B_address</text>
       <rect height="4" stroke="none" width="10" x="420" y="58"/>
       <text fill="#404040" font-family="Dialog" font-size="12" text-anchor="end" x="415" y="64">register_out_A_data</text>
-      <circ-port height="8" pin="230,240" width="8" x="46" y="96"/>
       <rect height="4" stroke="none" width="10" x="420" y="78"/>
       <text fill="#404040" font-family="Dialog" font-size="12" text-anchor="end" x="413" y="85">register_out_B_data</text>
       <rect fill="#fc00de" fill-opacity="0.996" height="20" stroke="none" width="360" x="59" y="172"/>
-      <circ-port height="8" pin="260,150" width="8" x="46" y="76"/>
       <circ-port height="8" pin="200,80" width="8" x="46" y="56"/>
-      <circ-port height="10" pin="2760,1270" width="10" x="425" y="55"/>
       <circ-port height="10" pin="2760,1800" width="10" x="425" y="75"/>
-      <circ-port height="8" pin="2760,1580" width="8" x="46" y="136"/>
       <circ-port height="8" pin="2760,1490" width="8" x="46" y="116"/>
+      <circ-port height="8" pin="2760,1580" width="8" x="46" y="136"/>
+      <circ-port height="10" pin="2760,1270" width="10" x="425" y="55"/>
+      <circ-port height="8" pin="260,150" width="8" x="46" y="76"/>
+      <circ-port height="8" pin="230,240" width="8" x="46" y="96"/>
       <rect fill="#ff00df" fill-opacity="0.078" height="143" stroke="#000000" stroke-width="2" width="359" x="59" y="48"/>
       <text fill="#ffffff" font-family="Dialog" font-size="14" font-weight="bold" text-anchor="middle" x="230" y="187">register_bank</text>
       <text font-family="SansSerif" font-size="12" text-anchor="middle" x="138" y="164">register_out_aux_address</text>
@@ -220,7 +225,6 @@ end TCL_Generic;&#13;
     <wire from="(2040,1440)" to="(2530,1440)"/>
     <wire from="(1590,120)" to="(2020,120)"/>
     <wire from="(1100,1870)" to="(1100,1900)"/>
-    <wire from="(290,1380)" to="(290,1400)"/>
     <wire from="(1750,1220)" to="(1870,1220)"/>
     <wire from="(560,1010)" to="(1750,1010)"/>
     <wire from="(1370,2200)" to="(1370,2330)"/>
@@ -563,7 +567,6 @@ end TCL_Generic;&#13;
     <wire from="(990,1220)" to="(1110,1220)"/>
     <wire from="(2600,1670)" to="(2630,1670)"/>
     <wire from="(230,240)" to="(280,240)"/>
-    <wire from="(290,1340)" to="(290,1350)"/>
     <wire from="(720,2570)" to="(720,2600)"/>
     <wire from="(360,1700)" to="(360,2680)"/>
     <wire from="(2570,2210)" to="(2640,2210)"/>
@@ -583,6 +586,7 @@ end TCL_Generic;&#13;
     <wire from="(2580,1100)" to="(2580,1180)"/>
     <wire from="(1930,2510)" to="(2020,2510)"/>
     <wire from="(1230,460)" to="(2020,460)"/>
+    <wire from="(290,1340)" to="(290,1400)"/>
     <wire from="(2210,1120)" to="(2570,1120)"/>
     <wire from="(650,2200)" to="(730,2200)"/>
     <wire from="(1230,1160)" to="(1230,1200)"/>
@@ -3584,9 +3588,6 @@ end TCL_Generic;&#13;
       <a name="bit3" val="0"/>
       <a name="bit4" val="0"/>
       <a name="bit5" val="1"/>
-    </comp>
-    <comp lib="1" loc="(290,1380)" name="NOT Gate">
-      <a name="facing" val="south"/>
     </comp>
     <comp lib="0" loc="(2690,1490)" name="Splitter">
       <a name="facing" val="west"/>
