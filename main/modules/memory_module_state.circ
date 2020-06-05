@@ -40,6 +40,11 @@ This file is intended to be loaded by Logisim-evolution (https://github.com/reds
     <tool name="Tunnel">
       <a name="facing" val="north"/>
     </tool>
+    <tool name="Constant">
+      <a name="facing" val="north"/>
+      <a name="width" val="25"/>
+      <a name="value" val="0x1ffffff"/>
+    </tool>
   </lib>
   <lib desc="#Gates" name="1"/>
   <lib desc="#Plexers" name="2">
@@ -238,25 +243,25 @@ end TCL_Generic;&#13;
     <a name="clabelfont" val="SansSerif bold 16"/>
     <a name="circuitnamedbox" val="true"/>
     <a name="circuitvhdlpath" val=""/>
+    <wire from="(260,230)" to="(420,230)"/>
+    <wire from="(260,270)" to="(420,270)"/>
     <wire from="(190,480)" to="(250,480)"/>
     <wire from="(250,510)" to="(550,510)"/>
     <wire from="(320,190)" to="(420,190)"/>
-    <wire from="(250,480)" to="(250,510)"/>
-    <wire from="(260,200)" to="(260,230)"/>
-    <wire from="(260,270)" to="(260,300)"/>
-    <wire from="(220,200)" to="(260,200)"/>
-    <wire from="(220,300)" to="(260,300)"/>
-    <wire from="(320,100)" to="(320,190)"/>
-    <wire from="(220,100)" to="(320,100)"/>
-    <wire from="(260,230)" to="(420,230)"/>
-    <wire from="(260,270)" to="(420,270)"/>
     <wire from="(290,150)" to="(290,210)"/>
     <wire from="(290,290)" to="(290,350)"/>
     <wire from="(220,350)" to="(290,350)"/>
     <wire from="(220,150)" to="(290,150)"/>
+    <wire from="(250,480)" to="(250,510)"/>
+    <wire from="(260,200)" to="(260,230)"/>
+    <wire from="(260,270)" to="(260,300)"/>
     <wire from="(290,210)" to="(420,210)"/>
     <wire from="(290,290)" to="(420,290)"/>
+    <wire from="(220,200)" to="(260,200)"/>
+    <wire from="(220,300)" to="(260,300)"/>
     <wire from="(220,250)" to="(420,250)"/>
+    <wire from="(320,100)" to="(320,190)"/>
+    <wire from="(220,100)" to="(320,100)"/>
     <comp lib="0" loc="(190,480)" name="Pin">
       <a name="label" val="clk"/>
     </comp>
@@ -305,13 +310,13 @@ end TCL_Generic;&#13;
       <rect height="4" stroke="none" width="10" x="50" y="158"/>
       <text fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="65" y="164">C_E3</text>
       <circ-port height="8" pin="210,650" width="8" x="46" y="156"/>
-      <circ-port height="8" pin="210,490" width="8" x="46" y="136"/>
       <circ-port height="8" pin="210,340" width="8" x="46" y="116"/>
-      <circ-port height="8" pin="300,170" width="8" x="46" y="56"/>
       <circ-port height="8" pin="560,170" width="8" x="46" y="76"/>
-      <circ-port height="8" pin="820,170" width="8" x="46" y="96"/>
       <rect height="3" stroke="none" width="10" x="220" y="59"/>
       <circ-port height="10" pin="1300,440" width="10" x="225" y="55"/>
+      <circ-port height="8" pin="820,170" width="8" x="46" y="96"/>
+      <circ-port height="8" pin="300,170" width="8" x="46" y="56"/>
+      <circ-port height="8" pin="210,490" width="8" x="46" y="136"/>
       <text fill="#404040" font-family="Dialog" font-size="12" text-anchor="end" x="215" y="64">hold</text>
       <rect height="20" stroke="none" width="160" x="60" y="170"/>
       <rect fill="#9effbb" fill-opacity="0.302" height="140" stroke="#000000" stroke-width="2" width="160" x="59" y="48"/>
@@ -533,26 +538,26 @@ end TCL_Generic;&#13;
       <text fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="65" y="84">disable_equal_result</text>
       <rect height="3" stroke="none" width="10" x="290" y="59"/>
       <text fill="#404040" font-family="Dialog" font-size="12" text-anchor="end" x="285" y="64">equal</text>
-      <circ-port height="10" pin="510,210" width="10" x="295" y="55"/>
       <circ-port height="8" pin="270,280" width="8" x="46" y="76"/>
-      <circ-port height="8" pin="250,210" width="8" x="46" y="96"/>
       <circ-port height="8" pin="250,190" width="8" x="46" y="56"/>
+      <circ-port height="8" pin="250,210" width="8" x="46" y="96"/>
+      <circ-port height="10" pin="510,210" width="10" x="295" y="55"/>
       <rect height="20" stroke="none" width="230" x="60" y="110"/>
       <rect fill="#e400ff" fill-opacity="0.173" height="80" stroke="#000000" stroke-width="2" width="230" x="60" y="50"/>
       <text fill="#ffffff" font-family="Dialog" font-size="14" font-weight="bold" text-anchor="middle" x="175" y="124">comparator_w_equal_disable</text>
       <circ-anchor facing="east" height="6" width="6" x="297" y="57"/>
     </appear>
     <wire from="(310,240)" to="(370,240)"/>
-    <wire from="(400,240)" to="(430,240)"/>
-    <wire from="(490,210)" to="(510,210)"/>
-    <wire from="(310,240)" to="(310,280)"/>
-    <wire from="(490,210)" to="(490,220)"/>
     <wire from="(510,210)" to="(520,210)"/>
     <wire from="(480,220)" to="(490,220)"/>
+    <wire from="(400,240)" to="(430,240)"/>
     <wire from="(330,200)" to="(430,200)"/>
+    <wire from="(490,210)" to="(510,210)"/>
     <wire from="(250,190)" to="(290,190)"/>
     <wire from="(250,210)" to="(290,210)"/>
+    <wire from="(310,240)" to="(310,280)"/>
     <wire from="(270,280)" to="(310,280)"/>
+    <wire from="(490,210)" to="(490,220)"/>
     <comp lib="3" loc="(330,200)" name="Comparator">
       <a name="width" val="5"/>
     </comp>
@@ -596,20 +601,20 @@ end TCL_Generic;&#13;
       <text fill="#404040" font-family="Dialog" font-size="12" text-anchor="end" x="205" y="64">equal</text>
       <rect height="20" stroke="none" width="150" x="60" y="90"/>
       <circ-port height="10" pin="640,120" width="10" x="215" y="55"/>
-      <circ-port height="8" pin="240,160" width="8" x="46" y="76"/>
       <circ-port height="8" pin="240,130" width="8" x="46" y="56"/>
+      <circ-port height="8" pin="240,160" width="8" x="46" y="76"/>
       <rect fill="#ff00b1" fill-opacity="0.220" height="60" stroke="#000000" stroke-width="2" width="150" x="60" y="50"/>
       <text fill="#ffffff" font-family="Dialog" font-size="14" font-weight="bold" text-anchor="middle" x="135" y="104">reg_addr_comp</text>
       <circ-anchor facing="east" height="6" width="6" x="217" y="57"/>
     </appear>
+    <wire from="(600,120)" to="(640,120)"/>
+    <wire from="(340,140)" to="(350,140)"/>
     <wire from="(280,130)" to="(300,130)"/>
     <wire from="(280,150)" to="(300,150)"/>
-    <wire from="(330,140)" to="(350,140)"/>
-    <wire from="(240,160)" to="(260,160)"/>
-    <wire from="(240,130)" to="(260,130)"/>
-    <wire from="(600,120)" to="(640,120)"/>
     <wire from="(280,120)" to="(350,120)"/>
     <wire from="(280,160)" to="(350,160)"/>
+    <wire from="(240,160)" to="(260,160)"/>
+    <wire from="(240,130)" to="(260,130)"/>
     <comp lib="0" loc="(240,160)" name="Pin">
       <a name="width" val="6"/>
       <a name="label" val="register_2"/>
@@ -617,9 +622,6 @@ end TCL_Generic;&#13;
     <comp lib="0" loc="(240,130)" name="Pin">
       <a name="width" val="6"/>
       <a name="label" val="register_1"/>
-    </comp>
-    <comp lib="1" loc="(330,140)" name="OR Gate">
-      <a name="size" val="30"/>
     </comp>
     <comp lib="0" loc="(260,130)" name="Splitter">
       <a name="incoming" val="6"/>
@@ -646,5 +648,8 @@ end TCL_Generic;&#13;
       <a name="labelloc" val="east"/>
     </comp>
     <comp loc="(600,120)" name="comparator_w_equal_disable"/>
+    <comp lib="1" loc="(340,140)" name="NAND Gate">
+      <a name="size" val="30"/>
+    </comp>
   </circuit>
 </project>
