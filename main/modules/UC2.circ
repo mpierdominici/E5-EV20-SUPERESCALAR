@@ -37,44 +37,44 @@ This file is intended to be loaded by Logisim-evolution (https://github.com/reds
   <lib desc="#I/O" name="5"/>
   <lib desc="#HDL-IP" name="6">
     <tool name="VHDL Entity">
-      <a name="content">--------------------------------------------------------------------------------&#13;
--- HEIG-VD, institute REDS, 1400 Yverdon-les-Bains&#13;
--- Project :&#13;
--- File    :&#13;
--- Autor   :&#13;
--- Date    :&#13;
---&#13;
---------------------------------------------------------------------------------&#13;
--- Description :&#13;
---&#13;
---------------------------------------------------------------------------------&#13;
-&#13;
-library ieee;&#13;
-  use ieee.std_logic_1164.all;&#13;
-  --use ieee.numeric_std.all;&#13;
-&#13;
-entity VHDL_Component is&#13;
-  port(&#13;
-  ------------------------------------------------------------------------------&#13;
-  --Insert input ports below&#13;
-    horloge_i  : in  std_logic;                    -- input bit example&#13;
-    val_i      : in  std_logic_vector(3 downto 0); -- input vector example&#13;
-  ------------------------------------------------------------------------------&#13;
-  --Insert output ports below&#13;
-    max_o      : out std_logic;                    -- output bit example&#13;
-    cpt_o      : out std_logic_Vector(3 downto 0)  -- output vector example&#13;
-    );&#13;
-end VHDL_Component;&#13;
-&#13;
---------------------------------------------------------------------------------&#13;
---Complete your VHDL description below&#13;
-architecture type_architecture of VHDL_Component is&#13;
-&#13;
-&#13;
-begin&#13;
-&#13;
-&#13;
-end type_architecture;&#13;
+      <a name="content">--------------------------------------------------------------------------------
+-- HEIG-VD, institute REDS, 1400 Yverdon-les-Bains
+-- Project :
+-- File    :
+-- Autor   :
+-- Date    :
+--
+--------------------------------------------------------------------------------
+-- Description :
+--
+--------------------------------------------------------------------------------
+
+library ieee;
+  use ieee.std_logic_1164.all;
+  --use ieee.numeric_std.all;
+
+entity VHDL_Component is
+  port(
+  ------------------------------------------------------------------------------
+  --Insert input ports below
+    horloge_i  : in  std_logic;                    -- input bit example
+    val_i      : in  std_logic_vector(3 downto 0); -- input vector example
+  ------------------------------------------------------------------------------
+  --Insert output ports below
+    max_o      : out std_logic;                    -- output bit example
+    cpt_o      : out std_logic_Vector(3 downto 0)  -- output vector example
+    );
+end VHDL_Component;
+
+--------------------------------------------------------------------------------
+--Complete your VHDL description below
+architecture type_architecture of VHDL_Component is
+
+
+begin
+
+
+end type_architecture;
 </a>
     </tool>
   </lib>
@@ -311,12 +311,12 @@ end TCL_Generic;&#13;
       <text fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="65" y="164">C_E3</text>
       <rect height="3" stroke="none" width="10" x="220" y="59"/>
       <circ-port height="8" pin="210,490" width="8" x="46" y="136"/>
-      <circ-port height="8" pin="560,170" width="8" x="46" y="76"/>
-      <circ-port height="8" pin="210,340" width="8" x="46" y="116"/>
-      <circ-port height="8" pin="300,170" width="8" x="46" y="56"/>
       <circ-port height="10" pin="1440,440" width="10" x="225" y="55"/>
       <circ-port height="8" pin="210,650" width="8" x="46" y="156"/>
+      <circ-port height="8" pin="560,170" width="8" x="46" y="76"/>
+      <circ-port height="8" pin="300,170" width="8" x="46" y="56"/>
       <circ-port height="8" pin="820,170" width="8" x="46" y="96"/>
+      <circ-port height="8" pin="210,340" width="8" x="46" y="116"/>
       <text fill="#404040" font-family="Dialog" font-size="12" text-anchor="end" x="215" y="64">hold</text>
       <rect height="20" stroke="none" width="160" x="60" y="170"/>
       <rect fill="#9effbb" fill-opacity="0.302" height="140" stroke="#000000" stroke-width="2" width="160" x="59" y="48"/>
@@ -598,10 +598,10 @@ end TCL_Generic;&#13;
       <text fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="65" y="84">disable_equal_result</text>
       <rect height="3" stroke="none" width="10" x="290" y="59"/>
       <text fill="#404040" font-family="Dialog" font-size="12" text-anchor="end" x="285" y="64">equal</text>
-      <circ-port height="8" pin="220,340" width="8" x="46" y="76"/>
-      <circ-port height="8" pin="250,190" width="8" x="46" y="56"/>
-      <circ-port height="8" pin="250,210" width="8" x="46" y="96"/>
       <circ-port height="10" pin="530,210" width="10" x="295" y="55"/>
+      <circ-port height="8" pin="220,340" width="8" x="46" y="76"/>
+      <circ-port height="8" pin="250,210" width="8" x="46" y="96"/>
+      <circ-port height="8" pin="250,190" width="8" x="46" y="56"/>
       <rect height="20" stroke="none" width="230" x="60" y="110"/>
       <rect fill="#e400ff" fill-opacity="0.173" height="80" stroke="#000000" stroke-width="2" width="230" x="60" y="50"/>
       <text fill="#ffffff" font-family="Dialog" font-size="14" font-weight="bold" text-anchor="middle" x="175" y="124">comparator_w_equal_disable</text>
