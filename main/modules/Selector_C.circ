@@ -2,7 +2,19 @@
 <project source="2.14.6" version="1.0">
   This file is intended to be loaded by Logisim-evolution (https://github.com/reds-heig/logisim-evolution).
 
-  <lib desc="#Wiring" name="0"/>
+  <lib desc="#Wiring" name="0">
+    <tool name="Splitter">
+      <a name="facing" val="west"/>
+    </tool>
+    <tool name="Tunnel">
+      <a name="facing" val="north"/>
+    </tool>
+    <tool name="Constant">
+      <a name="facing" val="north"/>
+      <a name="width" val="25"/>
+      <a name="value" val="0x1ffffff"/>
+    </tool>
+  </lib>
   <lib desc="#Gates" name="1"/>
   <lib desc="#Plexers" name="2">
     <tool name="Multiplexer">
@@ -133,6 +145,7 @@ end TCL_Generic;&#13;
     <a name="circuitvhdlpath" val=""/>
     <wire from="(260,210)" to="(320,210)"/>
     <wire from="(690,170)" to="(690,180)"/>
+    <wire from="(700,100)" to="(700,110)"/>
     <wire from="(800,140)" to="(850,140)"/>
     <wire from="(720,150)" to="(770,150)"/>
     <wire from="(180,130)" to="(240,130)"/>
@@ -140,7 +153,6 @@ end TCL_Generic;&#13;
     <wire from="(240,70)" to="(610,70)"/>
     <wire from="(500,230)" to="(620,230)"/>
     <wire from="(300,140)" to="(300,160)"/>
-    <wire from="(660,110)" to="(700,110)"/>
     <wire from="(500,210)" to="(500,230)"/>
     <wire from="(610,70)" to="(610,160)"/>
     <wire from="(750,100)" to="(750,130)"/>
@@ -157,6 +169,7 @@ end TCL_Generic;&#13;
     <wire from="(600,190)" to="(620,190)"/>
     <wire from="(520,170)" to="(550,170)"/>
     <wire from="(680,120)" to="(700,120)"/>
+    <wire from="(680,100)" to="(700,100)"/>
     <wire from="(750,130)" to="(770,130)"/>
     <wire from="(720,100)" to="(750,100)"/>
     <wire from="(450,150)" to="(470,150)"/>
@@ -224,7 +237,6 @@ end TCL_Generic;&#13;
       <a name="bit4" val="0"/>
       <a name="bit5" val="1"/>
     </comp>
-    <comp lib="0" loc="(690,180)" name="Ground"/>
     <comp lib="0" loc="(720,100)" name="Splitter">
       <a name="facing" val="west"/>
       <a name="incoming" val="6"/>
@@ -234,18 +246,22 @@ end TCL_Generic;&#13;
       <a name="bit4" val="0"/>
       <a name="bit5" val="1"/>
     </comp>
-    <comp lib="0" loc="(680,120)" name="Power">
-      <a name="facing" val="south"/>
-    </comp>
-    <comp lib="0" loc="(660,110)" name="Ground">
-      <a name="width" val="5"/>
-    </comp>
     <comp lib="0" loc="(850,140)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
       <a name="width" val="6"/>
       <a name="label" val="BusC_Selector"/>
       <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(690,170)" name="Constant">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="0" loc="(680,120)" name="Constant">
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="0" loc="(680,100)" name="Constant">
+      <a name="width" val="5"/>
+      <a name="value" val="0x0"/>
     </comp>
   </circuit>
 </project>

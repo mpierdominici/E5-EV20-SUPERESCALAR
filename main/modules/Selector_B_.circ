@@ -6,6 +6,14 @@
     <tool name="Splitter">
       <a name="facing" val="west"/>
     </tool>
+    <tool name="Tunnel">
+      <a name="facing" val="north"/>
+    </tool>
+    <tool name="Constant">
+      <a name="facing" val="north"/>
+      <a name="width" val="25"/>
+      <a name="value" val="0x1ffffff"/>
+    </tool>
   </lib>
   <lib desc="#Gates" name="1"/>
   <lib desc="#Plexers" name="2">
@@ -373,9 +381,6 @@ end TCL_Generic;&#13;
     <comp lib="1" loc="(590,140)" name="Controlled Buffer">
       <a name="width" val="6"/>
     </comp>
-    <comp lib="0" loc="(430,160)" name="Constant">
-      <a name="value" val="0x0"/>
-    </comp>
     <comp lib="0" loc="(480,140)" name="Splitter">
       <a name="facing" val="west"/>
       <a name="incoming" val="6"/>
@@ -543,9 +548,6 @@ end TCL_Generic;&#13;
       <a name="bit22" val="none"/>
       <a name="bit23" val="none"/>
     </comp>
-    <comp lib="0" loc="(490,600)" name="Constant">
-      <a name="value" val="0x0"/>
-    </comp>
     <comp lib="0" loc="(550,580)" name="Splitter">
       <a name="facing" val="west"/>
       <a name="incoming" val="6"/>
@@ -590,11 +592,15 @@ end TCL_Generic;&#13;
       <a name="bit4" val="0"/>
       <a name="bit5" val="1"/>
     </comp>
-    <comp lib="0" loc="(860,290)" name="Constant"/>
     <comp lib="0" loc="(830,280)" name="Constant">
       <a name="width" val="5"/>
       <a name="value" val="0x0"/>
     </comp>
     <comp lib="1" loc="(910,410)" name="NOR Gate"/>
+    <comp lib="0" loc="(430,160)" name="Constant"/>
+    <comp lib="0" loc="(860,290)" name="Constant">
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="0" loc="(490,600)" name="Constant"/>
   </circuit>
 </project>
