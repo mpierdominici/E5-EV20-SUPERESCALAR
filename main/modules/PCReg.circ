@@ -8,6 +8,11 @@ This file is intended to be loaded by Logisim-evolution (https://github.com/reds
     <tool name="Tunnel">
       <a name="facing" val="north"/>
     </tool>
+    <tool name="Constant">
+      <a name="facing" val="north"/>
+      <a name="width" val="25"/>
+      <a name="value" val="0x1ffffff"/>
+    </tool>
   </lib>
   <lib desc="#Gates" name="1"/>
   <lib desc="#Plexers" name="2">
@@ -148,10 +153,10 @@ end TCL_Generic;&#13;
       <text fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="65" y="64">jump_disp_or_addr</text>
       <rect height="4" stroke="none" width="10" x="290" y="58"/>
       <circ-port height="10" pin="700,210" width="10" x="295" y="55"/>
-      <circ-port height="8" pin="340,240" width="8" x="46" y="56"/>
-      <circ-port height="8" pin="220,200" width="8" x="46" y="116"/>
-      <circ-port height="8" pin="220,160" width="8" x="46" y="96"/>
+      <circ-port height="8" pin="80,200" width="8" x="46" y="116"/>
       <circ-port height="8" pin="350,130" width="8" x="46" y="76"/>
+      <circ-port height="8" pin="220,160" width="8" x="46" y="96"/>
+      <circ-port height="8" pin="340,240" width="8" x="46" y="56"/>
       <text fill="#404040" font-family="Dialog" font-size="12" text-anchor="end" x="285" y="64">PC</text>
       <rect height="20" stroke="none" width="230" x="60" y="130"/>
       <rect fill="none" height="100" stroke="#000000" stroke-width="2" width="230" x="60" y="50"/>
@@ -159,36 +164,34 @@ end TCL_Generic;&#13;
       <circ-anchor facing="east" height="6" width="6" x="297" y="57"/>
     </appear>
     <wire from="(340,240)" to="(430,240)"/>
-    <wire from="(420,150)" to="(450,150)"/>
     <wire from="(640,150)" to="(660,150)"/>
+    <wire from="(430,210)" to="(450,210)"/>
+    <wire from="(320,190)" to="(440,190)"/>
+    <wire from="(440,180)" to="(440,190)"/>
+    <wire from="(640,210)" to="(700,210)"/>
+    <wire from="(80,200)" to="(130,200)"/>
+    <wire from="(440,180)" to="(450,180)"/>
+    <wire from="(410,150)" to="(410,170)"/>
+    <wire from="(160,200)" to="(300,200)"/>
+    <wire from="(300,150)" to="(300,200)"/>
+    <wire from="(300,150)" to="(410,150)"/>
     <wire from="(430,210)" to="(430,240)"/>
     <wire from="(350,130)" to="(450,130)"/>
-    <wire from="(430,210)" to="(450,210)"/>
-    <wire from="(320,180)" to="(450,180)"/>
-    <wire from="(220,200)" to="(260,200)"/>
-    <wire from="(220,160)" to="(260,160)"/>
-    <wire from="(640,210)" to="(700,210)"/>
+    <wire from="(320,160)" to="(320,190)"/>
+    <wire from="(410,170)" to="(450,170)"/>
+    <wire from="(220,160)" to="(320,160)"/>
     <comp lib="0" loc="(660,150)" name="Ground"/>
     <comp lib="0" loc="(350,130)" name="Pin">
       <a name="label" val="Preload"/>
-    </comp>
-    <comp lib="0" loc="(220,200)" name="Pin">
-      <a name="label" val="HOLD"/>
     </comp>
     <comp lib="4" loc="(450,100)" name="Counter">
       <a name="width" val="11"/>
       <a name="max" val="0x7ff"/>
       <a name="ongoal" val="continue"/>
+      <a name="trigger" val="falling"/>
     </comp>
     <comp lib="0" loc="(220,160)" name="Pin">
       <a name="label" val="CLK1"/>
-    </comp>
-    <comp lib="1" loc="(320,180)" name="AND Gate">
-      <a name="negate0" val="true"/>
-      <a name="negate1" val="true"/>
-    </comp>
-    <comp lib="0" loc="(420,150)" name="Power">
-      <a name="facing" val="south"/>
     </comp>
     <comp lib="0" loc="(340,240)" name="Pin">
       <a name="width" val="11"/>
@@ -201,5 +204,9 @@ end TCL_Generic;&#13;
       <a name="label" val="PC"/>
       <a name="labelloc" val="east"/>
     </comp>
+    <comp lib="0" loc="(80,200)" name="Pin">
+      <a name="label" val="HOLD"/>
+    </comp>
+    <comp lib="1" loc="(160,200)" name="NOT Gate"/>
   </circuit>
 </project>
