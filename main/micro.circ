@@ -1477,7 +1477,8 @@ end TCL_Generic;&#13;
       <a name="addrWidth" val="11"/>
       <a name="dataWidth" val="24"/>
       <a name="contents">addr/data: 11 24
-800041 300041 200042
+933f3f 9e85ff 91ff1f 9fbbbf 9e223f 933f3e 9e85fe 91ff1e
+9fbbbe 9e223e
 </a>
       <a name="label" val="ProgramMemory"/>
       <a name="labelvisible" val="true"/>
