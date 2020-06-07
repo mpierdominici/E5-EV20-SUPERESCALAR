@@ -24,8 +24,8 @@ int main(int argc, char *argv[]) {
 		"ADR","MOV","ORR","ANR","CPL","LSR","LSL","ASL","CLR","SET","RET" };
 
 	string filename = "";
+	cout << "Escribir nombre del archivo de instrucciones (con su extension)" << endl;
 	cin >> filename;
-	filename += ".txt";
 
 	ifstream file_lectura(filename);
 	ofstream file_escritura("bin_" + filename);
