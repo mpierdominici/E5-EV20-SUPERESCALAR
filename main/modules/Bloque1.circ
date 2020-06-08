@@ -8,6 +8,11 @@ This file is intended to be loaded by Logisim-evolution (https://github.com/reds
     <tool name="Tunnel">
       <a name="facing" val="north"/>
     </tool>
+    <tool name="Constant">
+      <a name="facing" val="north"/>
+      <a name="width" val="25"/>
+      <a name="value" val="0x1ffffff"/>
+    </tool>
   </lib>
   <lib desc="#Gates" name="1"/>
   <lib desc="#Plexers" name="2">
@@ -146,23 +151,18 @@ end TCL_Generic;&#13;
       <text fill="#404040" font-family="Dialog" font-size="12" text-anchor="start" x="65" y="64">jump_type</text>
       <rect height="3" stroke="none" width="10" x="270" y="59"/>
       <text fill="#404040" font-family="Dialog" font-size="12" text-anchor="end" x="265" y="64">Preload</text>
-      <circ-port height="10" pin="690,160" width="10" x="275" y="55"/>
       <circ-port height="8" pin="190,340" width="8" x="46" y="56"/>
-      <circ-port height="8" pin="190,300" width="8" x="46" y="96"/>
       <circ-port height="8" pin="250,250" width="8" x="46" y="76"/>
+      <circ-port height="8" pin="190,300" width="8" x="46" y="96"/>
+      <circ-port height="10" pin="690,160" width="10" x="275" y="55"/>
       <rect height="20" stroke="none" width="210" x="60" y="110"/>
       <rect fill="none" height="80" stroke="#000000" stroke-width="2" width="210" x="60" y="50"/>
       <text fill="#ffffff" font-family="Dialog" font-size="14" font-weight="bold" text-anchor="middle" x="165" y="124">Bloque1</text>
       <circ-anchor facing="east" height="6" width="6" x="277" y="57"/>
     </appear>
     <wire from="(690,150)" to="(690,160)"/>
-    <wire from="(290,170)" to="(350,170)"/>
     <wire from="(340,190)" to="(400,190)"/>
-    <wire from="(490,150)" to="(490,220)"/>
     <wire from="(540,120)" to="(540,130)"/>
-    <wire from="(540,160)" to="(540,300)"/>
-    <wire from="(290,180)" to="(340,180)"/>
-    <wire from="(350,180)" to="(400,180)"/>
     <wire from="(320,200)" to="(320,210)"/>
     <wire from="(310,210)" to="(310,220)"/>
     <wire from="(370,150)" to="(370,160)"/>
@@ -170,11 +170,27 @@ end TCL_Generic;&#13;
     <wire from="(350,170)" to="(350,180)"/>
     <wire from="(340,180)" to="(340,190)"/>
     <wire from="(330,190)" to="(330,200)"/>
-    <wire from="(390,140)" to="(390,150)"/>
+    <wire from="(500,140)" to="(500,160)"/>
     <wire from="(290,60)" to="(400,60)"/>
     <wire from="(290,80)" to="(400,80)"/>
     <wire from="(290,100)" to="(400,100)"/>
     <wire from="(290,120)" to="(400,120)"/>
+    <wire from="(360,170)" to="(400,170)"/>
+    <wire from="(190,300)" to="(540,300)"/>
+    <wire from="(310,220)" to="(400,220)"/>
+    <wire from="(540,130)" to="(560,130)"/>
+    <wire from="(540,140)" to="(540,300)"/>
+    <wire from="(600,150)" to="(690,150)"/>
+    <wire from="(390,150)" to="(400,150)"/>
+    <wire from="(290,150)" to="(370,150)"/>
+    <wire from="(290,160)" to="(360,160)"/>
+    <wire from="(330,200)" to="(400,200)"/>
+    <wire from="(290,170)" to="(350,170)"/>
+    <wire from="(490,150)" to="(490,220)"/>
+    <wire from="(500,160)" to="(560,160)"/>
+    <wire from="(290,180)" to="(340,180)"/>
+    <wire from="(350,180)" to="(400,180)"/>
+    <wire from="(390,140)" to="(390,150)"/>
     <wire from="(290,70)" to="(400,70)"/>
     <wire from="(290,90)" to="(400,90)"/>
     <wire from="(290,110)" to="(400,110)"/>
@@ -182,27 +198,18 @@ end TCL_Generic;&#13;
     <wire from="(290,140)" to="(390,140)"/>
     <wire from="(270,220)" to="(270,250)"/>
     <wire from="(290,190)" to="(330,190)"/>
-    <wire from="(360,170)" to="(400,170)"/>
     <wire from="(400,220)" to="(490,220)"/>
-    <wire from="(190,300)" to="(540,300)"/>
-    <wire from="(310,220)" to="(400,220)"/>
     <wire from="(580,170)" to="(580,340)"/>
-    <wire from="(540,130)" to="(560,130)"/>
-    <wire from="(540,160)" to="(560,160)"/>
+    <wire from="(540,140)" to="(560,140)"/>
     <wire from="(290,200)" to="(320,200)"/>
     <wire from="(370,160)" to="(400,160)"/>
     <wire from="(290,210)" to="(310,210)"/>
-    <wire from="(600,150)" to="(690,150)"/>
     <wire from="(250,250)" to="(270,250)"/>
     <wire from="(450,140)" to="(460,140)"/>
-    <wire from="(390,150)" to="(400,150)"/>
-    <wire from="(290,150)" to="(370,150)"/>
+    <wire from="(490,140)" to="(500,140)"/>
     <wire from="(320,210)" to="(400,210)"/>
     <wire from="(190,340)" to="(580,340)"/>
-    <wire from="(490,140)" to="(560,140)"/>
     <wire from="(490,150)" to="(560,150)"/>
-    <wire from="(290,160)" to="(360,160)"/>
-    <wire from="(330,200)" to="(400,200)"/>
     <comp lib="0" loc="(690,160)" name="Pin">
       <a name="facing" val="north"/>
       <a name="output" val="true"/>
