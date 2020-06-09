@@ -3,6 +3,9 @@
 #include <sstream>
 #include <bitset>
 #include <fstream>
+#include <vector>
+#include <map>
+#include <algorithm>
 
 using namespace std;
 
@@ -17,21 +20,51 @@ int param_to_int(string param, int i);
 string operaciones_de_registros(string decod, string Rk, string Rj, string Ri);
 string operaciones_de_ctes(string decod, string K, string Ri);
 string operaciones_de_PCyMem(string decod, string K, string Ri);
-void switch_instruc(int i, string param, string* param_array, ofstream& file);
+void switch_instruc(int i, string param, string* param_array, ofstream& file, int line);
+
+map<string, int> labels;
+
 
 int main(int argc, char *argv[]) {
 	const char* letras_intruction[21]{ "MOK","ANK","ORK","ADK","JMP","JCY","JNE","JZE","MOM","BSR",
 		"ADR","MOV","ORR","ANR","CPL","LSR","LSL","ASL","CLR","SET","RET" };
 
 	string filename = "";
-	cout << "Escribir nombre del archivo de instrucciones (con su extension)" << endl;
+	std::cout << "Escribir nombre del archivo de instrucciones (con su extension)" << endl;
 	cin >> filename;
 
 	ifstream file_lectura(filename);
 	ofstream file_escritura("bin_" + filename);
 
-	string ingreso;
-	while (getline(file_lectura, ingreso))
+	string input;
+	vector<string> instructions;
+	int line = 0;
+	while (getline(file_lectura, input))
+	{
+		int startofopcode = 0;
+		if (!input.length()) { continue; }	// si es una linea en blanco
+		if (!isspace(input[0]))				// si tiene label
+		{
+			startofopcode = min(input.find(' '), input.find('\t')) + 1;	//permite delimitar los labels con tab o con espacio.
+			while (isspace(input[startofopcode])) { startofopcode++; }	//Por si se usan varios whitespaces de delimitacion.
+			string label = input.substr(0,startofopcode - 1);
+			if (labels.find(label) != labels.end()) {
+				cout << "Error, redefinicion de label" << endl;
+			}
+			labels[label] =  line;
+		}
+		else // si no tiene label
+		{
+			while (isspace(input[++startofopcode])) {}
+		}
+		if (startofopcode < input.length())	// Si no es una linea con todo whitespace
+		{
+			instructions.push_back(input.substr(startofopcode, input.length()));
+			line++;
+		}
+	}
+	int address = 0;
+	for(auto& ingreso : instructions)
 	{
 		string instruc = ingreso.substr(0, 3);
 		string param;
@@ -49,16 +82,17 @@ int main(int argc, char *argv[]) {
 				param.erase(0, pos + delimiter.length());
 			}
 		}
-		cout << "param ====== " << param << endl;
-		cout << "param array 0 =========" << param_array[0] << endl;
-		cout << "param array 1 =========" << param_array[1] << endl;
+		std::cout << "param ====== " << param << endl;
+		std::cout << "param array 0 =========" << param_array[0] << endl;
+		std::cout << "param array 1 =========" << param_array[1] << endl;
 
 		int i = 0;
 		while (strcmp(instruc.c_str(), letras_intruction[i]))
 		{
 			i++;
 		}
-		switch_instruc(i, param, param_array, file_escritura);
+		switch_instruc(i, param, param_array, file_escritura, address);
+		address++;
 	}
 
 	file_lectura.close();
@@ -124,9 +158,9 @@ string operaciones_de_registros(string decod, string Rk, string Rj, string Ri)
 	string bin_Ri = dec_to_binary_5(int_Ri);
 	string bin_Rj = dec_to_binary_5(int_Rj);
 	string bin_Rk = dec_to_binary_5(int_Rk);
-	cout << "instruccion en BINARIO ================  " << decod + bin_Rk + bin_Rj + bin_Ri << endl;
+	std::cout << "instruccion en BINARIO ================  " << decod + bin_Rk + bin_Rj + bin_Ri << endl;
 	unsigned long decimal = std::bitset<24>(decod + bin_Rk + bin_Rj + bin_Ri).to_ulong();
-	cout << "instruccion en HEXA ================  " << dec_to_hexa(decimal) << endl;
+	std::cout << "instruccion en HEXA ================  " << dec_to_hexa(decimal) << endl;
 	return dec_to_hexa(decimal);
 
 }
@@ -139,9 +173,9 @@ string operaciones_de_ctes(string decod, string K, string Ri)
 	K = K.substr(2);
 	string bin_K = hexa_to_binary_16(K);
 
-	cout << "instruccion en BINARIO =========" << decod + bin_K + bin_Ri << endl;
+	std::cout << "instruccion en BINARIO =========" << decod + bin_K + bin_Ri << endl;
 	unsigned long decimal = std::bitset<24>(decod + bin_K + bin_Ri).to_ulong();
-	cout << "instruccion en HEXA ================  " << dec_to_hexa(decimal) << endl;
+	std::cout << "instruccion en HEXA ================  " << dec_to_hexa(decimal) << endl;
 	return dec_to_hexa(decimal);
 }
 
@@ -150,19 +184,27 @@ string operaciones_de_PCyMem(string decod, string K, string Ri)
 	int int_Ri = param_to_int(Ri, 1);
 	string bin_Ri = dec_to_binary_5(int_Ri);
 
-	K = K.substr(2);
+	if (isalpha(K[0]))
+	{
+		K = to_string(labels[K]);
+	}
+	else
+	{
+		K = K.substr(2);
+	}
+
 	string bin_K = hexa_to_binary_15(K);
 
-	cout << "instruccion en BINARIO =========" << decod + bin_K + bin_Ri << endl;
+	std::cout << "instruccion en BINARIO =========" << decod + bin_K + bin_Ri << endl;
 	unsigned long decimal = std::bitset<24>(decod + bin_K + bin_Ri).to_ulong();
-	cout << "instruccion en HEXA ================  " << dec_to_hexa(decimal) << endl;
+	std::cout << "instruccion en HEXA ================  " << dec_to_hexa(decimal) << endl;
 	return dec_to_hexa(decimal);
 }
 
 
 
 
-void switch_instruc(int i, string param, string* param_array, ofstream& file)
+void switch_instruc(int i, string param, string* param_array, ofstream& file, int address)
 {
 	switch (i)
 	{
@@ -230,6 +272,11 @@ void switch_instruc(int i, string param, string* param_array, ofstream& file)
 
 	case BSR:
 	{
+		if (isalpha(param[0]))
+		{
+			param = "0x" + to_string(labels[param] - address);	//calcular el offset
+		}
+
 		file << operaciones_de_PCyMem("0001", param, "00000") << "\n";
 		break;
 	}
@@ -284,21 +331,21 @@ void switch_instruc(int i, string param, string* param_array, ofstream& file)
 
 	case CLR:
 	{
-		cout << "020000" << endl;
+		std::cout << "020000" << endl;
 		file << "020000" << "\n";
 		break;
 	}
 
 	case SET:
 	{
-		cout << "030000" << endl;
+		std::cout << "030000" << endl;
 		file << "030000" << "\n";
 		break;
 	}
 
 	case RET:
 	{
-		cout << "010000" << endl;
+		std::cout << "010000" << endl;
 		file << "010000" << "\n";
 		break;
 
