@@ -48,6 +48,7 @@ int main(int argc, char *argv[]) {
 	{
 		int startofopcode = 0;
 		if (!input.length()) { continue; }	// si es una linea en blanco
+		input = input.substr(0, input.find(';'));
 		if (!isspace(input[0]))				// si tiene label
 		{
 			startofopcode = min(input.find(' '), input.find('\t')) + 1;	//permite delimitar los labels con tab o con espacio.
