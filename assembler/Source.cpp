@@ -31,6 +31,7 @@ int main(int argc, char *argv[]) {
 	const char* letras_intruction[21]{ "MOK","ANK","ORK","ADK","JMP","JCY","JNE","JZE","MOM","BSR",
 		"ADR","MOV","ORR","ANR","CPL","LSR","LSL","ASL","CLR","SET","RET" };
 
+
 	string filename = "";
 	std::cout << "Escribir nombre del archivo de instrucciones (con su extension)" << endl;
 	cin >> filename;
@@ -91,9 +92,15 @@ int main(int argc, char *argv[]) {
 		std::cout << "param array 1 =========" << param_array[1] << endl;
 
 		int i = 0;
-		while (strcmp(instruc.c_str(), letras_intruction[i]))
+		while ( i < 21 && strcmp(instruc.c_str(), letras_intruction[i]))
 		{
 			i++;
+		}
+		if (i >= 21)
+		{
+			cout << endl << "+++++++++++++++++++++++++++++++++++++++++++++++++++++" << endl << endl;
+			cout << "ERROR: Mnemonic not found -> " << instruc << endl;
+			cout << endl << "+++++++++++++++++++++++++++++++++++++++++++++++++++++" << endl;
 		}
 		std::stringstream stream;
 		stream << "0x" << std::setfill('0') << std::setw(4) << std::hex << address;
