@@ -1,4 +1,5 @@
 #include <iostream>
+#include <iomanip>
 #include <string>
 #include <sstream>
 #include <bitset>
@@ -6,6 +7,7 @@
 #include <vector>
 #include <map>
 #include <algorithm>
+#include <sstream>
 
 using namespace std;
 
@@ -20,7 +22,7 @@ int param_to_int(string param, int i);
 string operaciones_de_registros(string decod, string Rk, string Rj, string Ri);
 string operaciones_de_ctes(string decod, string K, string Ri);
 string operaciones_de_PCyMem(string decod, string K, string Ri);
-void switch_instruc(int i, string param, string* param_array, ofstream& file, int line);
+void switch_instruc(int i, string param, string* param_array, ofstream& file_bin, ofstream& file_lst, int line);
 
 map<string, int> labels;
 
@@ -34,7 +36,9 @@ int main(int argc, char *argv[]) {
 	cin >> filename;
 
 	ifstream file_lectura(filename);
-	ofstream file_escritura("bin_" + filename);
+	ofstream file_bin("bin_" + filename);
+	ofstream file_lst("lst_" + filename);
+	file_bin << "v2.0 raw" << endl;
 
 	string input;
 	vector<string> instructions;
@@ -91,12 +95,19 @@ int main(int argc, char *argv[]) {
 		{
 			i++;
 		}
-		switch_instruc(i, param, param_array, file_escritura, address);
+		std::stringstream stream;
+		stream << "0x" << std::setfill('0') << std::setw(4) << std::hex << address;
+
+		file_lst << stream.str() << " ";
+		switch_instruc(i, param, param_array, file_bin, file_lst, address);
+		file_lst << " " << instructions[address] << endl;
+		
 		address++;
 	}
 
 	file_lectura.close();
-	file_escritura.close();
+	file_bin.close();
+	file_lst.close();
 	return 0;
 }
 
@@ -186,7 +197,9 @@ string operaciones_de_PCyMem(string decod, string K, string Ri)
 
 	if (isalpha(K[0]))
 	{
-		K = to_string(labels[K]);
+		std::stringstream stream;
+		stream << std::hex << labels[K];
+		K = stream.str();
 	}
 	else
 	{
@@ -204,55 +217,63 @@ string operaciones_de_PCyMem(string decod, string K, string Ri)
 
 
 
-void switch_instruc(int i, string param, string* param_array, ofstream& file, int address)
+void switch_instruc(int i, string param, string* param_array, ofstream& file_bin, ofstream& file_lst, int address)
 {
 	switch (i)
 	{
 	case MOK:
 	{
-		file << operaciones_de_ctes("100", param, param_array[0]) << "\n";
+		file_bin << operaciones_de_ctes("100", param, param_array[0]) << "\n";
+		file_lst << operaciones_de_ctes("100", param, param_array[0]);
 		break;
 	}
 
 	case ANK:
 	{
-		file << operaciones_de_ctes("101", param, param_array[0]) << "\n";
+		file_bin << operaciones_de_ctes("101", param, param_array[0]) << "\n";
+		file_lst << operaciones_de_ctes("101", param, param_array[0]);
 		break;
 	}
 
 	case ORK:
 	{
-		file << operaciones_de_ctes("110", param, param_array[0]) << "\n";
+		file_bin << operaciones_de_ctes("110", param, param_array[0]) << "\n";
+		file_lst << operaciones_de_ctes("110", param, param_array[0]);
 		break;
 	}
 
 	case ADK:
 	{
-		file << operaciones_de_ctes("111", param, param_array[0]) << "\n";
+		file_bin << operaciones_de_ctes("111", param, param_array[0]) << "\n";
+		file_lst << operaciones_de_ctes("111", param, param_array[0]);
 		break;
 	}
 
 	case JMP:
 	{
-		file << operaciones_de_PCyMem("0100", param, "00000") << "\n";
+		file_bin << operaciones_de_PCyMem("0100", param, "00000") << "\n";
+		file_lst << operaciones_de_PCyMem("0100", param, "00000");
 		break;
 	}
 
 	case JCY:
 	{
-		file << operaciones_de_PCyMem("0101", param, "00000") << "\n";
+		file_bin << operaciones_de_PCyMem("0101", param, "00000") << "\n";
+		file_lst << operaciones_de_PCyMem("0101", param, "00000");
 		break;
 	}
 
 	case JNE:
 	{
-		file << operaciones_de_PCyMem("0110", param, param_array[0]) << "\n";
+		file_bin << operaciones_de_PCyMem("0110", param, param_array[0]) << "\n";
+		file_lst << operaciones_de_PCyMem("0110", param, param_array[0]);
 		break;
 	}
 
 	case JZE:
 	{
-		file << operaciones_de_PCyMem("0111", param, param_array[0]) << "\n";
+		file_bin << operaciones_de_PCyMem("0111", param, param_array[0]) << "\n";
+		file_lst << operaciones_de_PCyMem("0111", param, param_array[0]);
 		break;
 	}
 
@@ -261,11 +282,13 @@ void switch_instruc(int i, string param, string* param_array, ofstream& file, in
 		string primera_letra = param_array[0].substr(0, 1);
 		if (primera_letra == "0")
 		{
-			file << operaciones_de_PCyMem("0011", param_array[0], param) << "\n";
+			file_bin << operaciones_de_PCyMem("0011", param_array[0], param) << "\n";
+			file_lst << operaciones_de_PCyMem("0011", param_array[0], param);
 		}
 		else
 		{
-			file << operaciones_de_PCyMem("0010", param, param_array[0]) << "\n";
+			file_bin << operaciones_de_PCyMem("0010", param, param_array[0]) << "\n";
+			file_lst << operaciones_de_PCyMem("0010", param, param_array[0]);
 		}
 		break;
 	}
@@ -274,79 +297,94 @@ void switch_instruc(int i, string param, string* param_array, ofstream& file, in
 	{
 		if (isalpha(param[0]))
 		{
-			param = "0x" + to_string(labels[param] - address);	//calcular el offset
+			//calcular el offset
+			std::stringstream stream;
+			stream << std::hex << labels[param] - address;
+			param = "0x" + stream.str();	
 		}
 
-		file << operaciones_de_PCyMem("0001", param, "00000") << "\n";
+		file_bin << operaciones_de_PCyMem("0001", param, "00000") << "\n";
+		file_lst << operaciones_de_PCyMem("0001", param, "00000");
 		break;
 	}
 
 	case ADR:
 	{
-		file << operaciones_de_registros("000010000", param, param_array[1], param_array[0]) << "\n";
+		file_bin << operaciones_de_registros("000010000", param, param_array[1], param_array[0]) << "\n";
+		file_lst << operaciones_de_registros("000010000", param, param_array[1], param_array[0]);
 		break;
 	}
 
 	case MOV:
 	{
-		file << operaciones_de_registros("000010100", "00000", param, param_array[0]) << "\n";
+		file_bin << operaciones_de_registros("000010100", "00000", param, param_array[0]) << "\n";
+		file_lst << operaciones_de_registros("000010100", "00000", param, param_array[0]);
 		break;
 	}
 
 	case ORR:
 	{
-		file << operaciones_de_registros("000011000", "00000", param, param_array[0]) << "\n";
+		file_bin << operaciones_de_registros("000011000", "00000", param, param_array[0]) << "\n";
+		file_lst << operaciones_de_registros("000011000", "00000", param, param_array[0]);
 		break;
 	}
 
 	case ANR:
 	{
-		file << operaciones_de_registros("000011100", "00000", param, param_array[0]) << "\n";
+		file_bin << operaciones_de_registros("000011100", "00000", param, param_array[0]) << "\n";
+		file_lst << operaciones_de_registros("000011100", "00000", param, param_array[0]);
 		break;
 	}
 
 	case CPL:
 	{
-		file << operaciones_de_registros("000001000", "00000", "00000", param) << "\n";
+		file_bin << operaciones_de_registros("000001000", "00000", "00000", param) << "\n";
+		file_lst << operaciones_de_registros("000001000", "00000", "00000", param);
 		break;
 	}
 
 	case LSR:
 	{
-		file << operaciones_de_registros("000001010", "00000", "00000", param) << "\n";
+		file_bin << operaciones_de_registros("000001010", "00000", "00000", param) << "\n";
+		file_lst << operaciones_de_registros("000001010", "00000", "00000", param);
 		break;
 	}
 
 	case LSL:
 	{
-		file << operaciones_de_registros("000001100", "00000", "00000", param) << "\n";
+		file_bin << operaciones_de_registros("000001100", "00000", "00000", param) << "\n";
+		file_lst << operaciones_de_registros("000001100", "00000", "00000", param);
 		break;
 	}
 
 	case ASL:
 	{
-		file << operaciones_de_registros("000001110", "00000", "00000", param) << "\n";
+		file_bin << operaciones_de_registros("000001110", "00000", "00000", param) << "\n";
+		file_lst << operaciones_de_registros("000001110", "00000", "00000", param);
 		break;
 	}
 
 	case CLR:
 	{
 		std::cout << "020000" << endl;
-		file << "020000" << "\n";
+		file_bin << "020000" << "\n";
+		file_lst << "020000";
 		break;
 	}
 
 	case SET:
 	{
 		std::cout << "030000" << endl;
-		file << "030000" << "\n";
+		file_bin << "030000" << "\n";
+		file_lst << "030000";
 		break;
 	}
 
 	case RET:
 	{
 		std::cout << "010000" << endl;
-		file << "010000" << "\n";
+		file_bin << "010000" << "\n";
+		file_lst << "010000";
 		break;
 
 	}
