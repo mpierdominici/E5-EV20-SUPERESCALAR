@@ -26,6 +26,14 @@ void switch_instruc(int i, string param, string* param_array, ofstream& file_bin
 
 map<string, int> labels;
 
+string remove_surrounding_space(string& s)
+{
+	int sos = -1, eos = s.length();	//start of string and end of string
+	while (isspace(s[++sos])) {}
+	while (isspace(s[--eos])) {}
+	return s.substr(sos, eos + 1 - sos);
+}
+
 
 int main(int argc, char *argv[]) {
 	const char* letras_intruction[21]{ "MOK","ANK","ORK","ADK","JMP","JCY","JNE","JZE","MOM","BSR",
@@ -47,13 +55,15 @@ int main(int argc, char *argv[]) {
 	while (getline(file_lectura, input))
 	{
 		int startofopcode = 0;
-		if (!input.length()) { continue; }	// si es una linea en blanco
 		input = input.substr(0, input.find(';'));
+		if (!input.length()) { continue; }	// si es una linea en blanco
 		if (!isspace(input[0]))				// si tiene label
 		{
 			startofopcode = min(input.find(' '), input.find('\t')) + 1;	//permite delimitar los labels con tab o con espacio.
 			while (isspace(input[startofopcode])) { startofopcode++; }	//Por si se usan varios whitespaces de delimitacion.
-			string label = input.substr(0,startofopcode - 1);
+			int endoflabel = startofopcode;
+			while (isspace(input[--endoflabel])) {}
+			string label = input.substr(0,endoflabel + 1);
 			if (labels.find(label) != labels.end()) {
 				cout << "Error, redefinicion de label" << endl;
 			}
@@ -65,7 +75,9 @@ int main(int argc, char *argv[]) {
 		}
 		if (startofopcode < input.length())	// Si no es una linea con todo whitespace
 		{
-			instructions.push_back(input.substr(startofopcode, input.length()));
+			string instruction = input.substr(startofopcode);
+			instruction = remove_surrounding_space(instruction);
+			instructions.push_back(instruction);
 			line++;
 		}
 	}
@@ -83,9 +95,11 @@ int main(int argc, char *argv[]) {
 			size_t pos = 0;
 			while ((pos = param.find(delimiter)) != std::string::npos)
 			{
-				param_array[j] = param.substr(0, pos);
+				string s = param.substr(0, pos);
+				param_array[j] =  remove_surrounding_space(s);
 				j++;
 				param.erase(0, pos + delimiter.length());
+				param = remove_surrounding_space(param);
 			}
 		}
 		std::cout << "param ====== " << param << endl;
