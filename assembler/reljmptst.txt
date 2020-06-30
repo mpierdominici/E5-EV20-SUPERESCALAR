@@ -1,0 +1,55 @@
+;*************************************;
+;      CALCULO NUMEROS FIBONACCI      ;
+;				 EV20				  ;
+;*************************************;
+; Calcula los numeros n y n+1 de Fibonacci
+; Espera a que Pi0 = 0xFFFF, y ahi lee n de Pi1
+
+	BSR poll
+	MOK R20,0x1
+	MOK R21,0x1
+lup	BSR fib
+	CLR
+	ADK R0,0XFFFF	; decrementar contador
+	JZE R0,done
+	JMP lup
+done 	MOV R30,R20
+	MOV R31,R21
+fin	JMP fin
+
+
+;***************;
+;      FIB      ;
+;***************;
+
+;Calcula los proximos numeros de fibonacci
+;Guarda el numero más alto en la posicion 
+;de memoria 0x10
+;Recibe:
+;R20: a_n
+;R21: a_(n-1)
+;Devuelve
+;R20: a_(n+1)
+;R21: a_n
+
+fib	CLR
+	ADR R22,R21,R20
+	MOV R21,R20
+	MOV R20,R22
+	MOM 0x10,R22
+	RET
+
+;***************;
+;      POLL     ;
+;***************;
+
+;Espera que el Pi0 = 0xFFFF
+;Luego, lee el valor de Pi1 y los guarda en R0
+
+poll	MOV R0,R28	;R28 = Pi0
+	CLR
+	ADK R0,0x1
+	JZE R0, found
+	JMP poll
+found	MOV R0,R29	; R29 = 
+	RET
